@@ -2,13 +2,154 @@
 <main class='main-content' id="app">
 <div class="main-banners">
 	<div class="main-slick">
-		<div class="main-slick-content">
-			<div class="container">
-				
+		{% for item in 0..2 %}
+			<div class="main-slick-content">
+				<div class="container">
+					<div class="banner-content">
+						<div class="banner-links">
+							<ul>
+								<li><a href="">газобетон</a></li>
+								<li><a href="">бревно</a></li>
+								<li><a href="">керамический блок</a></li>
+								<li><a href="">брус</a></li>
+							</ul>
+						</div>
+						<div class="banner-title"><h2>Строительство загородных домов</h2></div>
+						<div class="banner-text">В Москве и Московской области</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="main-page-triggers">
+	<div class="container">
+		<div class="trigger-item">
+			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-info">
+				<div class="trigger-item-name">Проектирование</div>
+				<div class="trigger-item-text">Разрабатываем проекты малоэтажных жилых домов и промышленных объектов</div>
+			</div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-info">
+				<div class="trigger-item-name">Строительство</div>
+				<div class="trigger-item-text">Работы любой сложности - от проектирования до реставрации старинных зданий</div>
+			</div>
+		</div>
+		<div class="trigger-item">
+			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-info">
+				<div class="trigger-item-name">Отделочные работы</div>
+				<div class="trigger-item-text">Профессиональная внутренняя отделка помещений, четкое соответствие дизайн проекту</div>
 			</div>
 		</div>
 	</div>
 </div>
-
+<div class="building-block">
+	<div class="container">
+		<div class="all-page-title">Строительство домов</div>
+		<div class="under-title">Наша компания имеет опыт в постройке следующих объектов</div>
+		<div class="header-block-links">
+			<a class="modal-link" href="">Заявка на бесплатную консультацию</a>
+			<a class="open-catalog" href="">Каталог типовых проектов</a>
+		</div>
+	</div>
+	<div class="projects-slick">
+		{% for item in 0..3 %}
+			<div class="projects-slick-content">
+				<div class="projects-slick-content-img"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
+				<div class="projects-slick-content-info">
+					<div class="projects-slick-content-before-name">Дома из</div>
+					<div class="projects-slick-content-name">Газобетона</div>
+					<div class="projects-slick-content-price">От 12 000 ₽ м2</div>
+					<div class="projects-slick-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
+					<div class="projects-slick-content-links">
+						<a class="buy-link" href="">Рассчитать стоимость</a>
+						<a class="view-more" href="">Узнать больше</a>							
+					</div>
+				</div>
+			</div>
+		{% endfor %}	
+	</div>
+</div>
+<div class="popular-projects">
+	<div class="container">
+		<div class="all-page-title">Популярные проекты</div>
+		<div class="under-title">На основе многлетнего опыта мы подготовили подборку наиболее практичных проектов</div>
+	</div>
+	{% for item in 0..3 %}
+		<div class="projects-slick-content">
+			<div class="projects-slick-content-img"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
+			<div class="projects-slick-content-info">
+				<div class="projects-slick-content-before-name">Дома из</div>
+				<div class="projects-slick-content-name">Газобетона</div>
+				<div class="projects-slick-content-price">От 12 000 ₽ м2</div>
+				<div class="projects-slick-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
+				<div class="projects-slick-content-links">
+					<a class="buy-link" href="">Рассчитать стоимость</a>
+					<a class="view-more" href="">Узнать больше</a>							
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+<div class="individual-project">
+	<div class="container">
+		<div class="individual-project-title">Индивидуальный проект</div>
+		<div class="individual-project-text">Если вы не можете найти подходящий Вам дом, наша компания всегда рада прислушаться к каждому пожеланию заказчика и создать уникальный проект дома отвечающий всем вашим требованиям.</div>
+		<div class="individual-project-links">
+			<a class="individual-project-link" href="">Заявка на бесплатную консультацию</a>
+			<a class="individual-project-link" href="">Каталог типовых проектов</a>
+		</div>
+	</div>
+</div>
+<div class="news-block">
+	<div class="container">
+		<div class="all-page-title">Новости</div>
+		<div class="news-block-content">
+			<a href="" class="news-item">
+				<div class="news-item-img"><img src="./assets/images/news.jpg" alt=""></div>
+				<div class="news-item-date">18 мая 2019</div>
+				<div class="news-item-text">Запуск обновленного вэб-сайта с обновлённым каталогом домов.</div>
+			</a>
+			<a href="" class="news-item">
+				<div class="news-item-img"><img src="./assets/images/news.jpg" alt=""></div>
+				<div class="news-item-date">18 мая 2019</div>
+				<div class="news-item-text">Наши строители вернулись с выставки проходящей в КРОКУС-СИТИ.</div>
+			</a>
+			<a href="" class="news-item">
+				<div class="news-item-img"><img src="./assets/images/news.jpg" alt=""></div>
+				<div class="news-item-date">18 мая 2019</div>
+				<div class="news-item-text">Начинаем редизайн сайта, возможна некорректная работа, но мы всегда доступны по номерам указанным выше.</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="about-company">
+	<div class="container">
+		<div class="all-page-title"></div>
+		<div class="about-company-text"></div>
+		<div class="about-company-triggers">
+			<div class="about-company-trigger">
+				<div class="number">500+</div>
+				<div class="text">Построенных объектов</div>
+			</div>
+			<div class="about-company-trigger">
+				<div class="number">600+</div>
+				<div class="text">Разработанных проектов</div>
+			</div>
+			<div class="about-company-trigger">
+				<div class="number">10</div>
+				<div class="text">Лет надежной работы</div>
+			</div>
+			<div class="about-company-trigger">
+				<div class="number">3</div>
+				<div class="text">Региона строительства</div>
+			</div>
+		</div>
+	</div>
+</div>
 </main>
 {% include "partials/footer.twig" %}
