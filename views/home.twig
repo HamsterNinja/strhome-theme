@@ -3,7 +3,7 @@
 <div class="main-banners">
 	<div class="main-slick">
 		{% for item in 0..2 %}
-			<div class="main-slick-content">
+			<div class="main-slick-content" style="background-image: url(./assets/images/slide.jpg);">
 				<div class="container">
 					<div class="banner-content">
 						<div class="banner-links">
@@ -25,21 +25,21 @@
 <div class="main-page-triggers">
 	<div class="container">
 		<div class="trigger-item">
-			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-img"><img src="./assets/images/trigger-1.png" alt=""></div>
 			<div class="trigger-item-info">
 				<div class="trigger-item-name">Проектирование</div>
 				<div class="trigger-item-text">Разрабатываем проекты малоэтажных жилых домов и промышленных объектов</div>
 			</div>
 		</div>
 		<div class="trigger-item">
-			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-img"><img src="./assets/images/trigger-1.png" alt=""></div>
 			<div class="trigger-item-info">
 				<div class="trigger-item-name">Строительство</div>
 				<div class="trigger-item-text">Работы любой сложности - от проектирования до реставрации старинных зданий</div>
 			</div>
 		</div>
 		<div class="trigger-item">
-			<div class="trigger-item-img"><img src="" alt=""></div>
+			<div class="trigger-item-img"><img src="./assets/images/trigger-1.png" alt=""></div>
 			<div class="trigger-item-info">
 				<div class="trigger-item-name">Отделочные работы</div>
 				<div class="trigger-item-text">Профессиональная внутренняя отделка помещений, четкое соответствие дизайн проекту</div>
@@ -52,8 +52,8 @@
 		<div class="all-page-title">Строительство домов</div>
 		<div class="under-title">Наша компания имеет опыт в постройке следующих объектов</div>
 		<div class="header-block-links">
-			<a class="modal-link" href="">Заявка на бесплатную консультацию</a>
-			<a class="open-catalog" href="">Каталог типовых проектов</a>
+			<a class="modal-link all-page-link" href="">Заявка на бесплатную консультацию</a>
+			<a class="open-catalog all-page-link" href="">Каталог типовых проектов</a>
 		</div>
 	</div>
 	<div class="projects-slick">
@@ -66,8 +66,8 @@
 					<div class="projects-slick-content-price">От 12 000 ₽ м2</div>
 					<div class="projects-slick-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
 					<div class="projects-slick-content-links">
-						<a class="buy-link" href="">Рассчитать стоимость</a>
-						<a class="view-more" href="">Узнать больше</a>							
+						<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
+						<a class="view-more all-page-link" href="">Узнать больше</a>							
 					</div>
 				</div>
 			</div>
@@ -79,29 +79,31 @@
 		<div class="all-page-title">Популярные проекты</div>
 		<div class="under-title">На основе многлетнего опыта мы подготовили подборку наиболее практичных проектов</div>
 	</div>
-	{% for item in 0..3 %}
-		<div class="projects-slick-content">
-			<div class="projects-slick-content-img"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
-			<div class="projects-slick-content-info">
-				<div class="projects-slick-content-before-name">Дома из</div>
-				<div class="projects-slick-content-name">Газобетона</div>
-				<div class="projects-slick-content-price">От 12 000 ₽ м2</div>
-				<div class="projects-slick-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
-				<div class="projects-slick-content-links">
-					<a class="buy-link" href="">Рассчитать стоимость</a>
-					<a class="view-more" href="">Узнать больше</a>							
+	<div class="projects-slick">
+		{% for item in 0..3 %}
+			<div class="projects-slick-content">
+				<div class="projects-slick-content-img"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
+				<div class="projects-slick-content-info">
+					<div class="projects-slick-content-before-name">Дома из</div>
+					<div class="projects-slick-content-name">Газобетона</div>
+					<div class="projects-slick-content-price">От 12 000 ₽ м2</div>
+					<div class="projects-slick-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
+					<div class="projects-slick-content-links">
+						<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
+						<a class="view-more all-page-link" href="">Узнать больше</a>							
+					</div>
 				</div>
 			</div>
-		</div>
-	{% endfor %}
+		{% endfor %}
+	</div>
 </div>
 <div class="individual-project">
 	<div class="container">
 		<div class="individual-project-title">Индивидуальный проект</div>
 		<div class="individual-project-text">Если вы не можете найти подходящий Вам дом, наша компания всегда рада прислушаться к каждому пожеланию заказчика и создать уникальный проект дома отвечающий всем вашим требованиям.</div>
 		<div class="individual-project-links">
-			<a class="individual-project-link" href="">Заявка на бесплатную консультацию</a>
-			<a class="individual-project-link" href="">Каталог типовых проектов</a>
+			<a class="individual-project-link all-page-link" href="">Заявка на бесплатную консультацию</a>
+			<a class="individual-project-link all-page-link" href="">Каталог типовых проектов</a>
 		</div>
 	</div>
 </div>

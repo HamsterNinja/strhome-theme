@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f87cb256b2c38b769680"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7388bb6389f6361619c8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -700,7 +700,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "C:\\Users\\Андрей\\Downloads\\start-template\\assets";
+/******/ 	__webpack_require__.p = "C:\\xampp\\htdocs\\strhome-theme\\assets";
 /******/
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -907,9 +907,29 @@ module.exports = Html5Entities;
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-console.log('w5');
+"use strict";
+
+
+$('.main-slick').slick({
+    slidesToShow: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: true,
+    dots: true,
+    swipeToSlide: true
+});
+$('.projects-slick').slick({
+    slidesToShow: 1,
+    centerMode: true,
+    centerPadding: '300px',
+    autoplay: false,
+    autoplaySpeed: 3000,
+    arrows: true,
+    dots: false,
+    swipeToSlide: true
+});
 
 /***/ }),
 /* 2 */

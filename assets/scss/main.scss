@@ -1,3 +1,5 @@
+@import 'vendors/slick.scss';
+@import 'vendors/slick-theme.scss';
 @import 'base/normalize';
 
 html {
@@ -20,14 +22,131 @@ body {
 img {
     max-width: 100%;
 }
-.main-content{
-    
+ul{
+    padding: 0;
+    margin: 0;
 }
-
-$opensans: 'Open Sans', sans-serif;
-
-
-
+h1,h2,h3,h4,h5{
+    margin: 0;
+}
+.container{
+	max-width: 1230px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.all-page-title{
+    font-size: 36px;
+    text-align: center;
+    line-height: 49px;
+    letter-spacing: -0.05em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+.under-title{
+    font-size: 18px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #666666;
+}
+.main-slick.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.main-slick .slick-dots {
+    bottom: 8px;
+}
+.main-slick .slick-dots li.slick-active button {
+    background: #33CC00;
+    border: none;
+}
+.main-slick .slick-dots li button {
+    background: #fff;
+    border: none;
+}
+.main-slick-content {
+    padding: 140px 0 150px;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+}
+.banner-content {
+    max-width: 500px;
+    background: rgba(255,255,255,0.5);
+    padding: 17px 7px;
+}
+.banner-links {
+    margin-bottom: 14px;
+}
+.banner-links li {
+    display: inline-block;
+}
+.banner-links li a {
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: -0.05em;
+    color: #6C6C6C;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 5px;
+    border-left: 1px solid #6C6C6C;
+}
+.banner-links li:first-child a{
+    border-left: none;
+    padding-left: 0;
+}
+.banner-title {
+    margin-bottom: 24px;
+}
+.banner-title h2 {
+    font-size: 48px;
+    line-height: 46px;
+    letter-spacing: -0.05em;
+    color: #316C48;
+}
+.banner-text {
+    font-size: 18px;
+    line-height: 17px;
+    letter-spacing: -0.05em;
+    color: #6C6C6C;
+}
+.main-page-triggers{
+    font-size: 0;
+    background-color: #E5E5E5;
+    padding: 40px 0 25px;
+}
+.building-block {
+    background: #E5E5E5;
+}
+.main-page-triggers .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 48px;
+}
+.trigger-item-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+.trigger-item-info {
+    display: inline-block;
+    vertical-align: middle;
+    width: calc(100% - 126px);
+}
+.trigger-item-name {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+    color: #666666;
+}
+.trigger-item-text {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+    color: #666666;
+}
 @import 'pages/home';
 @import 'components/buttons';
 @import 'layout/header';
