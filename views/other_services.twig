@@ -2,7 +2,7 @@
 <main class='main-content' id="app">
 	<div class="seo-title">
 		<div class="container">
-			<h1>Строительство домов в Москве и Московской области</h1>
+			<h1>Дома из кирпича под ключ</h1>
 		</div>
 	</div>
 	<div class="who-we-are_short">
@@ -24,36 +24,19 @@
 			<div class="who-we-are_short-image"><img src="./assets/images/building.jpg" alt=""></div>
 		</div>
 	</div>
-	<div class="our-projetcs-catalog">
+	<div class="gallery-works">
 		<div class="container">
-			<div class="all-page-title">Мы строим из Блока и Дерева</div>
-			<div class="under-title">Наша компания имеет опыт в постройке следующих объектов:</div>
-			<div class="our-projetcs-catalog-content">
-				{% for item in 0..3 %}
-					<div class="project-item">
-						<div class="project-item-image"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
-						<div class="project-item-info">
-							<div class="projects-content-before-name">Дома из</div>
-							<div class="projects-content-name">Газобетона</div>
-							<div class="projects-content-price">От 12 000 ₽ м2</div>
-							<div class="projects-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
-							<div class="projects-content-links">
-								<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
-								<a class="view-more" href="">Узнать больше</a>							
-							</div>
-						</div>
-					</div>
+			<div class="all-page-title">Галерея проводимых нами работ</div>
+			<div class="gallery-works-inner">
+				{% for item in 0..7 %}
+					<a class="gallery-item" href=""><img src="" alt=""></a>
 				{% endfor %}
 			</div>
 		</div>
 	</div>
 	<div class="our-works">
 		<div class="container">
-			<div class="all-page-title">Наши работы</div>
-			<div class="header-block-links">
-				<a href="" class="all-page-link big">Индивидуальные проекты</a>
-				<a href="" class="all-page-link big">Консультация специалиста</a>
-			</div>
+			<div class="all-page-title">Проекты домов из кирпича</div>
 			<div class="our-works-inner">
 				{% for item in 0..5 %}
 					<a href="" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url(./assets/images/work.jpg)">
