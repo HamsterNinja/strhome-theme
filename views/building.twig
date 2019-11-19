@@ -1,0 +1,60 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+	<div class="seo-title">
+		<div class="container">
+			<h1>Строительство домов в Москве и Московской области</h1>
+		</div>
+	</div>
+	<div class="who-we-are_short">
+		<div class="container">
+			<div class="who-we-are_short-content">
+				<div class="who-we-are_short-title">Коротко о нас</div>
+				<div class="who-we-are_short-name">КРЕПКИЙ ДОМ</div>
+				<div class="who-we-are_short-text">
+					<p>Группа строительных компаний, это профессионалы своего дела на каждом этапе строительства Вашего дома. У нас допустим заказ как типового проекта для постройки коттеджа, так и индивидуальные разработки. </p>
+					<p>Компания <b>«Крепкий дом»</b> выполнит любые работы по строительству независимо от их сложности.</p>
+				</div>
+				<div class="who-we-are_short-links">
+					<a href="" class="all-page-link big fix-width">Из чего мы строим</a>
+					<a href="" class="all-page-link big fix-width">Типовые проекты</a>
+					<a href="" class="all-page-link big fix-width">Наши работы</a>
+					<a href="" class="all-page-link big fix-width">Обратный звонок</a>
+				</div>
+			</div>
+			<div class="who-we-are_short-image"><img src="./assets/images/building.jpg" alt=""></div>
+		</div>
+	</div>
+	<div class="our-projetcs-catalog">
+		<div class="container">
+			<div class="all-page-title">Мы строим из Блока и Дерева</div>
+			<div class="under-title">Наша компания имеет опыт в постройке следующих объектов:</div>
+			<div class="our-projetcs-catalog-content">
+				{% for item in 0..3 %}
+					<div class="project-item">
+						<div class="project-item-image"><a href=""><img src="./assets/images/project.jpg" alt=""></a></div>
+						<div class="project-item-info">
+							<div class="projects-content-before-name">Дома из</div>
+							<div class="projects-content-name">Газобетона</div>
+							<div class="projects-content-price">От 12 000 ₽ м2</div>
+							<div class="projects-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
+							<div class="projects-content-links">
+								<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
+								<a class="view-more" href="">Узнать больше</a>							
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<div class="our-works">
+		<div class="container">
+			<div class="all-page-title">Наши работы</div>
+			<div class="header-block-links">
+				<a href="" class="all-page-link big">Индивидуальные проекты</a>
+				<a href="" class="all-page-link big">Консультация специалиста</a>
+			</div>
+		</div>
+	</div>
+</main>
+{% include "partials/footer.twig" %}

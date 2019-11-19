@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7388bb6389f6361619c8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "93f67df91b7cc90efb36"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -913,22 +913,38 @@ module.exports = Html5Entities;
 
 
 $('.main-slick').slick({
-    slidesToShow: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    arrows: true,
-    dots: true,
-    swipeToSlide: true
+  slidesToShow: 1,
+  autoplay: false,
+  autoplaySpeed: 3000,
+  arrows: true,
+  dots: true,
+  swipeToSlide: true
 });
 $('.projects-slick').slick({
-    slidesToShow: 1,
-    centerMode: true,
-    centerPadding: '300px',
-    autoplay: false,
-    autoplaySpeed: 3000,
-    arrows: true,
-    dots: false,
-    swipeToSlide: true
+  slidesToShow: 1,
+  centerMode: true,
+  centerPadding: '500px',
+  autoplay: false,
+  autoplaySpeed: 3000,
+  arrows: true,
+  dots: false,
+  swipeToSlide: true,
+  responsive: [{
+    breakpoint: 1600,
+    settings: {
+      arrows: true,
+      centerMode: true,
+      centerPadding: '350px'
+    }
+  }, {
+    breakpoint: 1280,
+    settings: {
+      arrows: false,
+      centerMode: true,
+      centerPadding: '200px',
+      slidesToShow: 1
+    }
+  }]
 });
 
 /***/ }),

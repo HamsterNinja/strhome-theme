@@ -17,6 +17,7 @@ html {
 
 body {
     background: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -26,7 +27,7 @@ ul{
     padding: 0;
     margin: 0;
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5,p{
     margin: 0;
 }
 .container{
@@ -43,12 +44,13 @@ h1,h2,h3,h4,h5{
     color: #666666;
     margin-bottom: 15px;
 }
-.under-title{
+.under-title {
     font-size: 18px;
     line-height: 17px;
     text-align: center;
     letter-spacing: -0.05em;
     color: #666666;
+    margin-bottom: 13px;
 }
 .main-slick.slick-dotted.slick-slider {
     margin-bottom: 0;
@@ -113,11 +115,12 @@ h1,h2,h3,h4,h5{
 }
 .main-page-triggers{
     font-size: 0;
-    background-color: #E5E5E5;
+    background-color: #f3f3f3;
     padding: 40px 0 25px;
 }
 .building-block {
-    background: #E5E5E5;
+    background: #f3f3f3;
+    padding: 25px 0 0 0;
 }
 .main-page-triggers .container {
     display: grid;
@@ -146,6 +149,265 @@ h1,h2,h3,h4,h5{
     line-height: 20px;
     letter-spacing: -0.05em;
     color: #666666;
+}
+.header-block-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.projects-slick-content.slick-slide {
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+.projects-slick-content.slick-slide.slick-current.slick-active.slick-center {
+    transform: scale(1);
+}
+.projects-slick-content-inner {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 680px;
+    width: 90%;
+    margin: 33px auto;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.projects-slick-content-img {
+    width: 230px;
+}
+.projects-slick-content-img a {
+    display: block;
+    height: 100%;
+}
+.projects-slick-content-img a img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.projects-slick-content-info {
+    width: calc(100% - 230px);
+    padding: 12px 35px 26px 25px;
+}
+.projects-content-before-name {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+.projects-content-name {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #333333;
+    margin-bottom: 23px;
+}
+.projects-content-price {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    color: #333333;
+    padding: 7px 6px;
+    border: 1px solid #316C48;
+    display: inline-block;
+    margin-bottom: 23px;
+}
+.projects-content-text {
+    font-size: 11px;
+    line-height: 15px;
+    color: #615F5F;
+    margin-bottom: 34px;
+}
+.projects-content-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-projects {
+    background: #f3f3f3;
+    padding: 20px 0;
+}
+.individual-project {
+    background: #f3f3f3;
+}
+.individual-project .container {
+    background-image: url(../images/individ.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    padding: 55px 15px;
+}
+.individual-project-title {
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.05em;
+    color: #666666;
+    max-width: 370px;
+    margin-bottom: 25px;
+}
+.individual-project-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.05em;
+    color: #666666;
+    max-width: 575px;
+    margin-bottom: 30px;
+}
+
+.news-block {
+    padding: 30px 0 35px;
+}
+.news-block-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap: 135px;
+    margin-top: 40px;
+}
+a.news-item {
+    text-decoration: none;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 69px 1fr;
+}
+.news-item-date {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #316C48;
+    margin-bottom: 5px;
+}
+.news-item-text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+.about-company {
+    padding: 45px 0 60px;
+    background-image: url(../images/company_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.about-company-text {
+    max-width: 640px;
+    font-size: 18px;
+    line-height: 25px;
+    color: #316C48;
+    margin-bottom: 34px;
+    margin-top: 40px;
+}
+.about-company-triggers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-company-trigger {
+    margin-right: 30px;
+    text-align: center;
+}
+.about-company-triggers .number {
+    font-size: 72px;
+    line-height: 98px;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+    color: #316C48;
+}
+.about-company-triggers .text {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.seo-title {
+    background: #666666;
+    padding: 26px 0;
+}
+.seo-title h1 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+}
+.who-we-are_short {
+    background-color: #f3f3f3;
+    padding: 40px 0 16px;
+}
+.who-we-are_short .container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 540px 1fr;
+}
+.who-we-are_short-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.05em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+.who-we-are_short-name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.05em;
+    color: #333333;
+    margin-bottom: 30px;
+}
+.who-we-are_short-text p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.who-we-are_short-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 525px;
+}
+
+
+
+.our-projetcs-catalog {
+    background-color: #f3f3f3;
+    padding: 16px 0 25px;
+}
+.our-projetcs-catalog-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.project-item {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.project-item-info {
+    width: calc(100% - 230px);
+    padding: 12px 35px 26px 25px;
+}
+.project-item-image {
+    width: 230px;
+}
+.project-item-image a{
+	display: block;
+	height: 100%;
+}
+.project-item-image a img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.our-works{
+	background-color: #f3f3f3;
 }
 @import 'pages/home';
 @import 'components/buttons';
