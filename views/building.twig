@@ -101,5 +101,15 @@
 			</div>
 		</div>
 	</div>
+	<div class="gallery-works">
+		<div class="container">
+			<div class="all-page-title">Наши работы</div>
+			<div class="gallery-works-inner">
+				{% for item in 0..7 %}
+					<a class="gallery-item" href=""><img src="./assets/images/work.jpg" alt=""></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </main>
 {% include "partials/footer.twig" %}
