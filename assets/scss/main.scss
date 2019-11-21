@@ -36,16 +36,17 @@ h1,h2,h3,h4,h5,p{
 	margin: 0 auto;
 	padding: 0 15px;
 }
-.all-page-title,
-.main-page-title{
+.all-page-title, .all-page-title h2, .main-page-title {
     font-size: 36px;
     text-align: center;
     line-height: 49px;
     letter-spacing: -0.05em;
-    margin-bottom: 15px;
     font-weight: 600;
+    max-width: 566px;
+    margin: 0 auto 25px;
 }
-.all-page-title{
+.all-page-title,
+.all-page-title h2{
     color: #333333;
 }
 .main-page-title{
@@ -586,8 +587,9 @@ a.our-works-item {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     grid-gap: 30px;
 }
-a.gallery-item{
+a.gallery-item {
     position: relative;
+    height: 156px;
 }
 a.gallery-item:after {
     content: "";
@@ -599,7 +601,104 @@ a.gallery-item:after {
     bottom: 0;
     background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%);
 }
-.gallery-item img{}
+.gallery-item img{
+    height: 156px;
+    width: 100%;
+    object-fit: cover;
+}
+.foundation-catalog {
+    padding: 25px 0;
+    background-color: #f3f3f3;
+}
+.foundation-catalog .under-title{
+    margin-bottom: 50px;
+}
+a.foundation-item {
+    text-decoration: none;
+    height: 326px;
+    position: relative;
+}
+.foundation-item-name {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    text-align: center;
+    bottom: 23px;
+}
+.foundation-prices {
+    background-color: #f3f3f3;
+    padding: 25px 0 25px;
+}
+
+.foundation-text {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.foundation-text p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    margin-bottom: 20px;
+}
+.foundation-text p:last-child{
+    margin: 0;
+}
+.foundation-prices-content {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+.foundation-prices-item {
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 18px 38px 25px;
+}
+.foundation-prices-item-name {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.05em;
+    color: #316C48;
+    margin-bottom: 10px;
+}
+
+.foundation-prices-item-before-value {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #333333;
+    margin-bottom: 3px;
+}
+
+.foundation-prices-item-value {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #316C48;
+    margin-bottom: 3px;
+}
+
+.foundation-prices-item-after-value {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #333333;
+    margin-bottom: 30px;
+}
 @import 'pages/home';
 @import 'components/buttons';
 @import 'layout/header';

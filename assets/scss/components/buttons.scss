@@ -19,10 +19,17 @@ a.all-page-link.big {
 a.all-page-link.fix-width{
     width: 160px;
 } 
+a.all-page-link.full-width{
+    width: 212px;
+}
+a.all-page-link.no-margin{
+    margin: 0;
+}
 a.open-catalog.all-page-link {
     position: absolute;
     right: 0;
 }
+
 a.view-more {
     font-weight: 600;
     font-size: 12px;

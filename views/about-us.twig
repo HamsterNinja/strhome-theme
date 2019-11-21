@@ -1,0 +1,81 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+<div class="seo-title">
+		<div class="container">
+			<h1>Строительство домов в Москве и Московской области</h1>
+		</div>
+	</div>
+	<div class="who-we-are_short">
+		<div class="container">
+			<div class="who-we-are_short-content">
+				<div class="who-we-are_short-name">Фундамент</div>
+				<div class="who-we-are_short-text">
+					<p>это не просто строительная конструкция. Это та часть здания или сооружения, которая принимает на себя всю нагрузку от вышележащих конструкций и должна безопасно распределить весь объем нагрузок их по основанию. </p>
+					<p>Эти части зданий не находятся на виду, но именно они несут на себе их вес, защищая от проседания конструкции домов. По правилам закладку фундаментов для различных строений проводят на такой глубине, которая исключает промерзание почвы.</p>
+				</div>
+				<div class="who-we-are_short-links">
+					<a href="" class="all-page-link big fix-width">Цены</a>
+					<a href="" class="all-page-link big fix-width">Типы фундамента</a>
+					<a href="" class="all-page-link big fix-width">Наши работы</a>
+					<a href="" class="all-page-link big fix-width">Обратный звонок</a>
+				</div>
+			</div>
+			<div class="who-we-are_short-image"><img src="./assets/images/building.jpg" alt=""></div>
+		</div>
+	</div>
+	<div class="foundation-catalog">
+		<div class="container">
+			<div class="all-page-title">Виды фундаментов</div>
+			<div class="under-title">Классификация фундаментов весьма обширна. Но на практике чаще всего применяются следующие их варианты:</div>
+			<div class="our-works-inner">
+				{% for item in 0..5 %}
+					<a href="" class="foundation-item" style="background-image: url(./assets/images/foun-1.jpg)">
+						<div class="foundation-item-name">Блочный</div>
+					</a>
+				{% endfor %}
+			</div>
+			<div class="foundation-text">
+				<p>Этот перечень весьма далек от хрестоматийной полноты, описывая лишь наиболее часто встречающиеся конструкции. По результатам изысканий и учитывая экономическую целесообразность, разумеется, не в ущерб надежности, могут быть применены и другие виды фундаментов, а также их сочетания.</p>
+			</div>
+		</div>
+	</div>
+	<div class="foundation-prices">
+		<div class="container">
+			<div class="all-page-title"><h2>Стоимость устройства фундамента</h2></div>
+			<div class="foundation-text">
+				<p>Стремление людей не экономить на фундаменте продиктовано здравым смыслом. Действительно, трещина, пошедшая по стене, уничтожит и дорогие окна, двери, и отнюдь не дешевые виды внешней и внутренней отделки. Лучше положиться на опыт профессионалов, которые сделают свою работу быстро, качественно и не доведут семейный бюджет до банкротства. Кстати, само по себе строительство фундамента под ключ, подразумевающее выполнение всех работ одной компанией, уже существенно снижает его цену.</p>
+			</div>
+			<div class="foundation-prices-content">
+				{% for item in 0..3 %}
+					<div class="foundation-prices-item">
+						<div class="foundation-prices-item-name">ЛЕНТОЧНЫЙ ФУНДАМЕНТ</div>
+						<div class="foundation-prices-item-before-value">от</div>
+						<div class="foundation-prices-item-value">12 000 ₽</div>
+						<div class="foundation-prices-item-after-value">за куб. м.</div>
+						<div class="foundation-prices-item-link"><a class="all-page-link big full-width no-margin" href="">Побробнее</a></div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="all-page-title"><h2>Подготовительные процедуры</h2></div>
+			<div class="foundation-text" style="margin-bottom: 50px;">
+				<p>Прежде всего, необходимо провести изыскательские работы на участке. Они выполняются с учетом массы здания, зависящей от его этажности, материалов стен и крыши. Выясняется глубина промерзания грунта, преобладающая порода, определяющая склонность к пучению и просадке, а также уровень грунтовых вод и другие особенности местности. Наличие цокольного этажа, подвала или подземного гаража накладывают свои требования к устройству фундамента. Кроме прочего, возможно, потребуется коррекция рельефа участка (планирование).</p>
+				<p>Руководствуясь ГОСТ 27751‑88 с изменениями 1994 года и другими нормативными документами, по результатам изысканий принимается решение о типе фундамента и составляется смета на его устройство. В сложных ситуациях, плывун, близость грунтовых вод и других, в принятии оптимального решения немаловажен и солидный опыт инженера.</p>
+			</div>
+			<div class="all-page-title"><h2>Самостоятельный монтаж фундамента</h2></div>
+			<div class="foundation-text">
+				<p>Самодеятельность не приветствуется ни на одном из этапов строительства, разумеется, кроме тех случаев, когда профессионал выполняет какие-либо работы для собственных нужд. Тем более нет нужды рисковать, если речь идет об устройстве фундамента здания. Именно этот конструктивный элемент во многом определяет целостность и прочность других составляющих строения, будь то стены или крыша, на протяжении всего периода его эксплуатации. А посему лучше предпочесть строительство фундамента под ключ специалистами затратным и опасным экспериментам, проведенным самостоятельно.</p>
+			</div>
+		</div>
+	</div>
+	<div class="gallery-works" style="padding: 25px 0 50px;">
+		<div class="container">
+			<div class="all-page-title">Наши работы</div>
+			<div class="gallery-works-inner">
+				{% for item in 0..7 %}
+					<a class="gallery-item" href=""><img src="./assets/images/work.jpg" alt=""></a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</main>
+{% include "partials/footer.twig" %}
