@@ -884,10 +884,11 @@ span.page-numbers.dots {
     grid-gap: 45px;
     grid-template-columns: 1fr 1fr;
 }
-.product-information-column .product-information-column-inner{
+.product-information-column .product-information-column-inner {
     background: #FFFFFF;
     border: 2px solid #316C48;
     padding: 17px 40px 40px;
+    margin-top: 15px;
 }
 .product-information-title{
     font-weight: 600;
@@ -1157,13 +1158,13 @@ span.page-numbers.dots {
     color: #666666;
 }
 .building-include p ul{
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
 }
 .building-include ul li {
     font-size: 16px;
     line-height: 22px;
     color: #666666;
-    margin: 20px 0;
+    margin-bottom: 20px;
     display: inline-block;
     vertical-align: top;
 }
@@ -1177,6 +1178,133 @@ span.page-numbers.dots {
     border-radius: 50%;
     margin-top: 6px;
     margin-right: 15px;
+}
+.contacts-map {
+    position: relative;
+}
+
+.contacts-page-content {
+    position: absolute;
+    top: 0;
+    left: calc((100% - 1115px) / 2);
+    background-color: #fff;
+    padding: 16px 8px 35px;
+    max-width: 340px;
+    width: 100%;
+}
+.contacts-page-content-item{
+    margin-bottom: 22px;
+}
+.contacts-item-name{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;   
+    color: #333333;
+}
+.contacts-item-value{
+    font-size: 16px;
+    line-height: 22px;   
+    color: #333333;
+}
+.contacts-item-value a{
+    text-decoration: none;
+    color: #333333;
+}
+.contacts-callback a{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: #316C48;
+    text-decoration: none;
+}
+.contacts-page-form {
+    padding: 10px 0 20px;
+}
+
+.contacts-page-form .container {
+    max-width: 1145px;
+}
+
+.contacts-page-form-name {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+    color: #333333;
+    margin-bottom: 35px;
+}
+.contacts-page-form-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contacts-page-form-left {
+    max-width: 370px;
+    width: 100%;
+    margin-right: 40px;
+}
+.contacts-page-form-left form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacts-page-form-left label {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+}
+input.contatsInput {
+    display: block;
+    font-size: 14px;
+    line-height: 19px;
+    color: #CBCBCB;
+    font-weight: 400;
+    background: #FFFFFF;
+    border: 0.5px solid #D8D8D8;
+    padding: 6px 9px;
+    margin-top: 12px;
+}
+
+.contacts-page-form-left form textarea{
+    width: 100%;
+    height: 97px;
+    resize: none;
+    padding: 6px 10px;
+    background: #FFFFFF;
+    border: 0.5px solid #D8D8D8;
+    font-size: 14px;
+    line-height: 19px;
+    color: #CBCBCB;
+    margin-bottom: 18px;
+}
+input.contactsSubmit {
+    background: #316C48;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    border: 1px solid #316C48;
+    padding: 7px 59px;
+    margin-bottom: 13px;
+}
+.private-policy{
+    font-size: 8px;
+    line-height: 11px;
+    color: #CBCBCB;
+}
+.private-policy a{
+    font-size: 8px;
+    line-height: 11px;
+    color: #CBCBCB;
+}
+.contacts-page-form-right {
+    font-size: 14px;
+    line-height: 19px;
+    color: #CBCBCB;
+    width: 250px;
 }
 @import 'pages/home';
 @import 'components/buttons';
