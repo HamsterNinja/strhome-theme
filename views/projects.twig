@@ -1,0 +1,66 @@
+{% include "partials/header.twig" %}
+<main class='main-content' id="app">
+	<div class="seo-title">
+		<div class="container">
+			<h1>Проекты домов</h1>
+		</div>
+	</div>
+	<div class="products-filter">
+		<div class="container">
+			<form action="">
+				<div class="filter-row">
+					<p class="label-text">Выберите желаемые материалы для постройки дома</p>
+					<select name="" id="">
+						<option value="">Кирпич</option>
+						<option value="">Брус</option>
+						<option value="">Газобетон</option>
+					</select>
+				</div>
+				<div class="filter-row">
+					<p class="label-text">Площадь</p>
+					<div class="filter-column"><input type="number" placeholder="От"></div>
+					<div class="filter-column"><input type="number" placeholder="До"></div>
+				</div>
+				<div class="filter-row">
+					<p class="label-text">Желаемая этажность дома</p>
+					<input type="text" placeholder="Пример">
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="sorting_block">
+		<div class="container">
+			<div class="sorting_block-inner">
+				<div class="number-of-posts">Отображение 1-12 из 92 результатов</div>
+				<div class="sorting-value">
+					<select name="" id="">
+						<option value="">Исходная сортировка</option>
+						<option value="">По цене</option>
+						<option value="">По цене</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="our-works">
+		<div class="container">
+			<div class="our-works-inner">
+				{% for item in 0..5 %}
+					<a href="" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url(./assets/images/work.jpg)">
+						<div class="our-works-item-content">
+							<div class="our-works-item-name">ПРОЕКТ ДОМА «КЁЛЬН»</div>
+							<div class="our-works-item-info">
+								<div class="our-works-item-size">212,4 М2</div>
+								<div class="our-works-item-price">45 000 P</div>
+							</div>
+						</div>
+					</a>
+				{% endfor %}
+			</div>
+			<a href="" class="all-page-link big view-all">Все проекты</a>
+		</div>
+	</div>
+
+
+</main>
+{% include "partials/footer.twig" %}
