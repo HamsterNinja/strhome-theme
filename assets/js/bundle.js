@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "939ee6e0af89a35a2fee"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2fe0f592f88fe4bf98d3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -945,6 +945,20 @@ $('.projects-slick').slick({
       slidesToShow: 1
     }
   }]
+});
+$('.product-slick-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.product-slick-nav'
+});
+$('.product-slick-nav').slick({
+  slidesToShow: 10,
+  slidesToScroll: 1,
+  asNavFor: '.product-slick-for',
+  focusOnSelect: true,
+  arrows: false
 });
 
 /***/ }),

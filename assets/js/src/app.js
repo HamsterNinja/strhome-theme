@@ -35,3 +35,17 @@ $('.projects-slick').slick({
     }
   ]
 });
+ $('.product-slick-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.product-slick-nav'
+});
+$('.product-slick-nav').slick({
+  slidesToShow: 10,
+  slidesToScroll: 1,
+  asNavFor: '.product-slick-for',
+  focusOnSelect: true,
+  arrows: false,
+});
