@@ -20,7 +20,7 @@
 					<a href="" class="all-page-link big fix-width">Обратный звонок</a>
 				</div>
 			</div>
-			<div class="who-we-are_short-image"><img src="./assets/images/building.jpg" alt=""></div>
+			<div class="who-we-are_short-image"><img src="{{ site.theme.link }}/assets/images/building.jpg" alt=""></div>
 		</div>
 	</div>
 	<div class="foundation-catalog">
@@ -29,7 +29,7 @@
 			<div class="under-title">Классификация фундаментов весьма обширна. Но на практике чаще всего применяются следующие их варианты:</div>
 			<div class="our-works-inner">
 				{% for item in 0..5 %}
-					<a href="" class="foundation-item" style="background-image: url(./assets/images/foun-1.jpg)">
+					<a href="" class="foundation-item" style="background-image: url({{ site.theme.link }}/assets/images/foun-1.jpg)">
 						<div class="foundation-item-name">Блочный</div>
 					</a>
 				{% endfor %}
@@ -72,7 +72,7 @@
 			<div class="all-page-title">Наши работы</div>
 			<div class="gallery-works-inner">
 				{% for item in 0..7 %}
-					<a class="gallery-item" href=""><img src="./assets/images/work.jpg" alt=""></a>
+					<a class="gallery-item" href=""><img src="{{ site.theme.link }}/assets/images/work.jpg" alt=""></a>
 				{% endfor %}
 			</div>
 		</div>

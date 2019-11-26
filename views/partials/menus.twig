@@ -1,0 +1,13 @@
+{% macro menu_list(items) %}
+    {% import _self as menus %}
+    {% for item in items %}
+        <li class="{{item.class}} {% if item.has_child_class %}menu_has_childen{% endif %}">
+            <a href="{{ item.link }}">{{ item.title }}</a>
+            {% if item.has_child_class %}
+                <ul class="sub-menu">
+                    {{ menus.menu_list(item.get_children) }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}

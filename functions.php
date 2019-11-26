@@ -44,6 +44,7 @@ add_theme_support('post-thumbnails');
 
 register_nav_menus(array(
     'menu_header' => 'Верхнее меню',
+    'menu_footer' => 'Нижние меню',
 ));
 
 function add_async_forscript($url)
@@ -116,6 +117,7 @@ class StarterSite extends TimberSite {
     
     function add_to_context( $context ) {
         $context['menu_header'] = new TimberMenu('menu_header');  
+        $context['menu_footer'] = new TimberMenu('menu_footer');  
         $context['site'] = $this;
     
 		return $context;

@@ -2,7 +2,11 @@
 	<div class="footer-content">
 		<div class="container">
 			<div class="footer-content-info">
-				<div class="footer-logo"><a href=""><img src="./assets/images/logo.svg" alt=""></a></div>
+				<div class="footer-logo">
+					<a href="#">
+						<img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
+					</a>
+				</div>
 				<div class="footer-phone"><a href="">+7 (000) 000-00-00</a></div>
 				<div class="footer-callback"><a class="all-page-link" href="">Обратный звонок</a></div>
 				<div class="footer-contacts">
@@ -40,9 +44,7 @@
 	</div>
 
 </footer>
-<script src="assets/js/vendors/jquery-3.4.1.min.js"></script>
-<script src="assets/js/vendors/slick.js"></script>
-<script src="assets/js/bundle.js"></script>
+{{ function('wp_footer') }}
 </body>
 
 </html>
