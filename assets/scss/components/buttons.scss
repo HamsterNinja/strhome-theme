@@ -5,26 +5,31 @@
     color: #FFFFFF;
     background: #316C48;
     border: 1px solid #316C48;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
     text-decoration: none;
     padding: 3px 16px;
     display: inline-block;
 }
+
 a.all-page-link.big {
     padding: 8px 15px;
     text-align: center;
     margin: 0 15px 20px 0;
 }
-a.all-page-link.fix-width{
+
+a.all-page-link.fix-width {
     width: 160px;
-} 
-a.all-page-link.full-width{
+}
+
+a.all-page-link.full-width {
     width: 212px;
 }
-a.all-page-link.no-margin{
+
+a.all-page-link.no-margin {
     margin: 0;
 }
+
 a.open-catalog.all-page-link {
     position: absolute;
     right: 0;
@@ -38,9 +43,11 @@ a.view-more {
     text-decoration: none;
     display: inline-block;
 }
+
 a.individual-project-link.all-page-link {
     margin-right: 30px;
 }
+
 a.all-page-link.big.view-all {
     display: block;
     margin: 0 auto;
@@ -48,6 +55,7 @@ a.all-page-link.big.view-all {
     background-color: transparent;
     color: #316C48;
 }
+
 a.all-page-link.big.fix-width.contacts-link {
     margin: 0;
     background-color: #fff;
@@ -57,7 +65,11 @@ a.all-page-link.big.fix-width.contacts-link {
     border: 1px solid #FFFFFF;
     padding: 7px 15px;
 }
-.main-header-callback{}
-.main-header-callback a{}
-.footer-callback{}
-.footer-callback a{}
+
+.main-header-callback {}
+
+.main-header-callback a {}
+
+.footer-callback {}
+
+.footer-callback a {}

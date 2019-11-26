@@ -19,27 +19,29 @@
 			</div>
 			<div class="footer-content-menu">
 				<ul>
-					<li><a href="">Проекты из Газоблоков</a></li>
-					<li><a href="">Проекты из Керамики</a></li>
-					<li><a href="">Проекты из Бревна</a></li>
-					<li><a href="">Проекты из Бруса</a></li>
+					{% for item in menu_footer_projects.get_items %}
+					<li class="{{item.class}}">
+						<a href="{{ item.link }}">{{ item.title }}</a>
+					</li>
+					{% endfor %}    
 				</ul>
 			</div>
 			<div class="footer-content-menu">
 				<ul>
-					<li><a href="">Этапы работы с Клиентом</a></li>
-					<li><a href="">О компании</a></li>
-					<li><a href="">Реквизиты</a></li>
-					<li><a href="">Контакты</a></li>
+					{% for item in menu_footer_about.get_items %}
+					<li class="{{item.class}}">
+						<a href="{{ item.link }}">{{ item.title }}</a>
+					</li>
+					{% endfor %}   
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="under-footer">
 		<div class="container">
-			<div class="under-footer-link"><a href="">Карта сайта</a></div>
+			<div class="under-footer-link"><a href="{{ site.link }}/sitemap">Карта сайта</a></div>
 			<div class="under-footer-link"><a href="">Политика конфиденциальности</a></div>
-			<div class="under-footer-link"><a href="">Сайт разработан студией IS ART</a></div>
+			<div class="under-footer-link"><a href="https://is-art.ru/" target="_blank" rel="noopener">Сайт разработан студией IS ART</a></div>
 		</div>
 	</div>
 

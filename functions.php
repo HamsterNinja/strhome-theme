@@ -44,7 +44,8 @@ add_theme_support('post-thumbnails');
 
 register_nav_menus(array(
     'menu_header' => 'Верхнее меню',
-    'menu_footer' => 'Нижние меню',
+    'menu_footer_projects' => 'Нижние меню проекты',
+    'menu_footer_about' => 'Нижние меню о нас',
 ));
 
 function add_async_forscript($url)
@@ -74,7 +75,7 @@ add_action('wp_footer', 'add_scripts');
 function add_scripts() {
     time_enqueuer('jquerylatest', '/assets/js/vendors/jquery-3.4.1.min.js', 'script', true);
     time_enqueuer('slick', '/assets/js/vendors/slick.js', 'script', true);
-    time_enqueuer('lazyload', '/assets/js/vendors/lazyload.min.js', 'script', true);
+    // time_enqueuer('lazyload', '/assets/js/vendors/lazyload.min.js', 'script', true);
     time_enqueuer('app', '/assets/js/main.bundle.js', 'script', true);
     
     wp_localize_script( 'app', 'SITEDATA', array(
@@ -117,7 +118,8 @@ class StarterSite extends TimberSite {
     
     function add_to_context( $context ) {
         $context['menu_header'] = new TimberMenu('menu_header');  
-        $context['menu_footer'] = new TimberMenu('menu_footer');  
+        $context['menu_footer_projects'] = new TimberMenu('menu_footer_projects');  
+        $context['menu_footer_about'] = new TimberMenu('menu_footer_about');  
         $context['site'] = $this;
     
 		return $context;
