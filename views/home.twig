@@ -115,27 +115,17 @@
 	<div class="container">
 		<div class="main-page-title">Новости</div>
 		<div class="news-block-content">
-			<a href="" class="news-item">
-				<div class="news-item-img"><img src="{{ site.theme.link }}/assets/images/news.jpg" alt=""></div>
-				<div class="news-item-info">
-					<div class="news-item-date">18 мая 2019</div>
-					<div class="news-item-text">Запуск обновленного вэб-сайта с обновлённым каталогом домов.</div>
-				</div>
-			</a>
-			<a href="" class="news-item">
-				<div class="news-item-img"><img src="{{ site.theme.link }}/assets/images/news.jpg" alt=""></div>
-				<div class="news-item-info">
-					<div class="news-item-date">18 мая 2019</div>
-					<div class="news-item-text">Наши строители вернулись с выставки проходящей в КРОКУС-СИТИ.</div>
-				</div>
-			</a>
-			<a href="" class="news-item">
-				<div class="news-item-img"><img src="{{ site.theme.link }}/assets/images/news.jpg" alt=""></div>
-				<div class="news-item-info">
-					<div class="news-item-date">18 мая 2019</div>
-					<div class="news-item-text">Начинаем редизайн сайта, возможна некорректная работа, но мы всегда доступны по номерам указанным выше.</div>
-				</div>
-			</a>
+			{% for post in news_posts %}
+				<a href="{{ post.link }}" class="news-item">
+					<div class="news-item-img">
+						<img src="{{ site.theme.link }}/assets/images/news.jpg" alt="">
+					</div>
+					<div class="news-item-info">
+						<div class="news-item-date">{{ post.post_date|date('j F Y') }}</div>
+						<div class="news-item-text">{{ post.title }}</div>
+					</div>
+				</a>
+			{% endfor %}
 		</div>
 	</div>
 </div>
