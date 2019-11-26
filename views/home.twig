@@ -52,15 +52,19 @@
 		<div class="main-page-title">Строительство домов</div>
 		<div class="under-title">Наша компания имеет опыт в постройке следующих объектов</div>
 		<div class="header-block-links">
-			<a class="modal-link all-page-link" href="">Заявка на бесплатную консультацию</a>
-			<a class="open-catalog all-page-link" href="">Каталог типовых проектов</a>
+			<a class="modal-link all-page-link" href="#">Заявка на бесплатную консультацию</a>
+			<a class="open-catalog all-page-link" href="{{ site.link }}/shop">Каталог типовых проектов</a>
 		</div>
 	</div>
 	<div class="projects-slick">
-		{% for item in 0..3 %}
+		{% for post in popular_projects %}
 			<div class="projects-slick-content">
 					<div class="projects-slick-content-inner">
-					<div class="projects-slick-content-img"><a href=""><img src="{{ site.theme.link }}/assets/images/project.jpg" alt=""></a></div>
+					<div class="projects-slick-content-img">
+						<a href="{{ post.link }}">
+							<img src="{{ site.theme.link }}/assets/images/project.jpg" alt="">
+						</a>
+					</div>
 					<div class="projects-slick-content-info">
 						<div class="projects-content-before-name">Дома из</div>
 						<div class="projects-content-name">Газобетона</div>
@@ -68,7 +72,7 @@
 						<div class="projects-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
 						<div class="projects-content-links">
 							<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
-							<a class="view-more" href="">Узнать больше</a>							
+							<a class="view-more" href="{{ post.link }}">Узнать больше</a>							
 						</div>
 					</div>
 				</div>
@@ -82,10 +86,14 @@
 		<div class="under-title">На основе многлетнего опыта мы подготовили подборку наиболее практичных проектов</div>
 	</div>
 	<div class="projects-slick">
-		{% for item in 0..3 %}
+		{% for post in popular_projects %}
 			<div class="projects-slick-content">
 				<div class="projects-slick-content-inner">
-					<div class="projects-slick-content-img"><a href=""><img src="{{ site.theme.link }}/assets/images/project.jpg" alt=""></a></div>
+					<div class="projects-slick-content-img">
+						<a href="{{ post.link }}">
+							<img src="{{ site.theme.link }}/assets/images/project.jpg" alt="">
+						</a>
+					</div>
 					<div class="projects-slick-content-info">
 						<div class="projects-content-before-name">Дома из</div>
 						<div class="projects-content-name">Газобетона</div>
@@ -93,7 +101,7 @@
 						<div class="projects-content-text">Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время. Это материал лучшее соотношение цена/качество в настощяее время.</div>
 						<div class="projects-content-links">
 							<a class="buy-link all-page-link" href="">Рассчитать стоимость</a>
-							<a class="view-more" href="">Узнать больше</a>							
+							<a class="view-more" href="{{ post.link }}">Узнать больше</a>							
 						</div>
 					</div>
 				</div>
@@ -107,7 +115,7 @@
 		<div class="individual-project-text">Если вы не можете найти подходящий Вам дом, наша компания всегда рада прислушаться к каждому пожеланию заказчика и создать уникальный проект дома отвечающий всем вашим требованиям.</div>
 		<div class="individual-project-links">
 			<a class="individual-project-link all-page-link" href="">Заявка на бесплатную консультацию</a>
-			<a class="individual-project-link all-page-link" href="">Каталог типовых проектов</a>
+			<a class="individual-project-link all-page-link" href="{{ site.link }}/shop">Каталог типовых проектов</a>
 		</div>
 	</div>
 </div>
