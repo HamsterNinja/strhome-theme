@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="contacts-map">
-        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6de8d30e0235759bbe49618a403e9d0fda7fb67024b74163efcc7670d7ba4784&amp;width=100%25&amp;height=340&amp;lang=ru_RU&amp;scroll=true"></script>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor:6de8d30e02357.." width="100%" height="340" frameborder="0"></iframe>
         <div class="contacts-page-content">
             <div class="contacts-page-content-item">
                 <div class="contacts-item-name">Адрес:</div>
@@ -14,13 +14,15 @@
             </div>
             <div class="contacts-page-content-item">
                 <div class="contacts-item-name">Телефон:</div>
-                <div class="contacts-item-value"><a href="">+7 (999) 999-99-99</a> многоканальный</div>
+                <div class="contacts-item-value"><a href="tel:{{ phone }}">{{ phone }}</a> многоканальный</div>
             </div>
             <div class="contacts-page-content-item">
                 <div class="contacts-item-name">Время работы:</div>
                 <div class="contacts-item-value">Ежедневно 9:00 - 22:00</div>
             </div>
-            <div class="contacts-callback"><a href="">ЗАКАЗАТЬ ЗВОНОК</a></div>
+            <div class="contacts-callback">
+                <a href="#" v-on:click.prevent="showModal('modal-window--callback')">ЗАКАЗАТЬ ЗВОНОК</a>
+            </div>
         </div>
     </div>
     <div class="contacts-page-form">

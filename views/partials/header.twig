@@ -53,6 +53,8 @@
 					{{ menus.menu_list(menu_header.get_items) }}
      			</ul>
      		</div>
-     		<div class="main-header-callback"><a class="all-page-link" href="">Обратный звонок</a></div>
+     		<div class="main-header-callback">
+				 <a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
+			</div>
      	</div>
     </header>

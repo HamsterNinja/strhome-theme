@@ -121,6 +121,13 @@ class StarterSite extends TimberSite {
         $context['menu_footer_projects'] = new TimberMenu('menu_footer_projects');  
         $context['menu_footer_about'] = new TimberMenu('menu_footer_about');  
         $context['site'] = $this;
+
+        $context['phone'] = TimberHelper::transient( 'phone', function(){     
+            return get_field('phone', 'options');
+        }, 600 );
+        $context['mail'] = TimberHelper::transient( 'mail', function(){     
+            return get_field('mail', 'options');
+        }, 600 );
     
 		return $context;
 	}

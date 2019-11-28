@@ -7,13 +7,15 @@
 						<img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
 					</a>
 				</div>
-				<div class="footer-phone"><a href="">+7 (000) 000-00-00</a></div>
-				<div class="footer-callback"><a class="all-page-link" href="">Обратный звонок</a></div>
+				<div class="footer-phone"><a href="tel:{{ phone }}">{{ phone }}</a></div>
+				<div class="footer-callback">
+					<a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
+				</div>
 				<div class="footer-contacts">
 					<p>125445 г. Москва, Ленинградское шоссе, д. 69, корп. 1, БЦ River City, этаж 5, офис 55</p>
 					<p>
-						Тел./факс: +7 (000) 000-00-00<br>	
-						E-mail: info@t-z.ru
+						Тел./факс: {{ phone }}<br>	
+						E-mail: {{ mail }}
 					</p>
 				</div>
 			</div>
@@ -40,7 +42,7 @@
 	<div class="under-footer">
 		<div class="container">
 			<div class="under-footer-link"><a href="{{ site.link }}/sitemap">Карта сайта</a></div>
-			<div class="under-footer-link"><a href="">Политика конфиденциальности</a></div>
+			<div class="under-footer-link"><a href="{{ site.link }}/privacy-policy">Политика конфиденциальности</a></div>
 			<div class="under-footer-link"><a href="https://is-art.ru/" target="_blank" rel="noopener">Сайт разработан студией IS ART</a></div>
 		</div>
 	</div>
