@@ -1,1 +1,11 @@
 <? 
+
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page(array(
+        'page_title'    => 'Основные настройки',
+        'menu_title'    => 'Основные настройки',
+        'menu_slug'     => 'options',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}

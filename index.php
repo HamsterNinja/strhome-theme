@@ -18,6 +18,9 @@ if ( is_home() ) {
 	);            
 	$context['popular_projects'] = Timber::get_posts( $args_popular_projects );
 
+	$banners = get_field('banners', 'options');
+	$context['banners'] = $banners;
+
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }
 Timber::render( $templates, $context );

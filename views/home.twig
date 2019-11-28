@@ -1,9 +1,9 @@
 {% include "partials/header.twig" %}
-<main class='main-content' id="app">
+<main class='main-content'>
 <div class="main-banners">
 	<div class="main-slick">
-		{% for item in 0..2 %}
-			<div class="main-slick-content" style="background-image: url({{ site.theme.link }}/assets/images/slide.jpg);">
+		{% for banner in banners %}
+			<div class="main-slick-content" style="background-image: url({{ banner.image }});">
 				<div class="container">
 					<div class="banner-content">
 						<div class="banner-links">
@@ -14,8 +14,10 @@
 								<li><a href="">брус</a></li>
 							</ul>
 						</div>
-						<div class="banner-title"><h2>Строительство загородных домов</h2></div>
-						<div class="banner-text">В Москве и Московской области</div>
+						<div class="banner-title">
+							<h2>{{ banner.title }}</h2>
+						</div>
+						<div class="banner-text">{{ banner.desc }}</div>
 					</div>
 				</div>
 			</div>
@@ -52,7 +54,7 @@
 		<div class="main-page-title">Строительство домов</div>
 		<div class="under-title">Наша компания имеет опыт в постройке следующих объектов</div>
 		<div class="header-block-links">
-			<a class="modal-link all-page-link" href="#">Заявка на бесплатную консультацию</a>
+			<a class="modal-link all-page-link" v-on:click.prevent="showModal('modal-window--callback')" href="#">Заявка на бесплатную консультацию</a>
 			<a class="open-catalog all-page-link" href="{{ site.link }}/shop">Каталог типовых проектов</a>
 		</div>
 	</div>
