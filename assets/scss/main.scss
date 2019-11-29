@@ -522,6 +522,7 @@ a.our-works-item {
     height: 0;
     overflow: hidden;
     text-decoration: none;
+    background-size: auto, cover!important;
 }
 
 .our-works-item-content {
@@ -734,6 +735,8 @@ a.foundation-item {
     text-decoration: none;
     height: 326px;
     position: relative;
+    background-size: cover;
+    background-position: 50%; 
 }
 
 .foundation-item-name {
