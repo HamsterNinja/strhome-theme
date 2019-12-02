@@ -11,6 +11,12 @@ Vue.use(Vuelidate);
 import СontactForm from './components/СontactForm.vue';
 Vue.component('contact-form', СontactForm);
 
+import ProductList from './components/ProductList.vue';
+Vue.component('product-list', ProductList);
+
+import productItem from './components/ProductItem.vue';
+Vue.component('product-item', productItem);
+
 let elVue = "#app";
 let elVueQuery = document.querySelector(elVue);
 
