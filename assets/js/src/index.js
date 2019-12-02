@@ -81,6 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     centerPadding: '200px',
                     slidesToShow: 1
                 }
+            },
+            {
+                breakpoint: 940,
+                settings: {
+                    arrows: false,
+                    centerMode: false,
+                    
+                }
             }
         ]
     });
