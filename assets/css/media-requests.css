@@ -212,4 +212,10 @@
   .contacts_block-phone a {
     margin: 0;
   }
+  .banner-links li a {
+    font-size: 12px;
+  }
+  .main-header-logo {
+    width: 180px;
+  }
 }
