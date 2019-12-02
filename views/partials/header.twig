@@ -40,7 +40,7 @@
 
 <body class="{{ body_class }}">
 	<div id="app">
-    <header class="main-header">
+    <header class="main-header desktop">
      	<div class="container">
      		<div class="main-header-logo">
 				 <a href="{{ site.link }}">
@@ -57,4 +57,29 @@
 				 <a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
 			</div>
      	</div>
+    </header>
+        <header class="main-header mobile">
+        <div class="container">
+        	<div class="main-header-logo">
+				 <a href="{{ site.link }}">
+					 <img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
+				</a>
+			</div>
+            <button class="btn-hamburger btn-hamburger-1 js_hamburger"><span></span></button>
+             
+        </div>
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <button class="btn-hamburger active btn-hamburger-1 js_hamburger"><span></span></button>
+                <div class="main-header-callback">
+					<a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
+				</div>
+            </div>
+            <div class="mobile-menu-content">
+                <ul>
+					{% import 'partials/menus.twig' as menus %}
+					{{ menus.menu_list(menu_header.get_items) }}
+     			</ul>
+            </div>
+        </div>
     </header>

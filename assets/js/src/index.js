@@ -87,6 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     centerPadding: '200px',
                     slidesToShow: 1
                 }
+            },
+            {
+                breakpoint: 940,
+                settings: {
+                    arrows: false,
+                    centerMode: false,
+                    
+                }
             }
         ]
     });
@@ -108,3 +116,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+$('.btn-hamburger').click(function() {    
+    $('.mobile-menu').addClass('active');
+});
+$('.btn-hamburger.active').click(function() {    
+    $('.mobile-menu').removeClass('active');
+});
+
+$(".mobile-menu .menu-item-has-children>a").after('<div class="menu-toggle"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 200 200"><path d="M193.177 46.233l8.28 8.28-100.723 100.728L0 54.495l8.28-8.279 92.46 92.46 92.437-92.443z" fill="#ffffff"/></svg></div>');
+     $('.menu-toggle').click(function() {
+        $(this).parent().find('.sub-menu').slideToggle();
+        $(this).toggleClass('active');
+    });
+
