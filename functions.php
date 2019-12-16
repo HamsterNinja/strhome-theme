@@ -78,10 +78,33 @@ function add_scripts() {
     // time_enqueuer('lazyload', '/assets/js/vendors/lazyload.min.js', 'script', true);
     time_enqueuer('app', '/assets/js/main.bundle.js', 'script', true);
     
+    $queried_object = get_queried_object();
+    if ($queried_object) {
+        $term_id = $queried_object->term_id;
+        $term = get_term( $term_id, 'product_cat' );
+        $category_slug = $term->slug;
+        $current_brand_term = get_term( $term_id, 'brand_product' );
+        $current_brand = $current_brand_term->slug;
+    }
+    if($_GET && $category_slug == null){
+        if ($_GET['product-cat']) {
+            $category_slug = $_GET['product-cat'];
+        }
+    }
+
     wp_localize_script( 'app', 'SITEDATA', array(
         'url' => get_site_url(),
         'themepath' => get_template_directory_uri(),
         'ajax_url' => admin_url('admin-ajax.php'),
+        'is_home' => is_home() ? 'true' : 'false',
+        'is_product' => is_product() ? 'true' : 'false',
+        'is_filter' => is_page('filter') ? 'true' : 'false',
+        'is_cart' => is_cart() ? 'true' : 'false',
+        'is_search' => is_search() ? 'true' : 'false',
+        'search_query' => get_search_query() ? get_search_query() : '',
+        'product_id' => get_the_ID(),
+        'current_user_id' => get_current_user_id(),
+        'category_slug' => $category_slug,
     ));
 }
 
