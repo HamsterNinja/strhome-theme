@@ -1497,6 +1497,12 @@ span.page-numbers.dots {
   text-align: left;
   margin: 0 0 25px;
 }
+.product-description .all-page-text {
+  margin-top: 0;
+}
+.product-description .all-page-text p {
+  font-size: 16px;
+}
 .technical-specifications table tr td {
   padding: 10px 0;
   font-size: 16px;
@@ -1641,8 +1647,12 @@ span.page-numbers.dots {
 .complectaions-content-inner:first-child {
   display: block;
 }
-.complectaions-content-inner table {
+.complectations-list {
+  margin-bottom: 30px;
+}
+.complectations-list table, .complectaions-content-inner table {
   border-collapse: collapse;
+  width: 100%;
 }
 .complectaions-content-inner table tbody tr td {
   font-size: 16px;
@@ -1651,6 +1661,24 @@ span.page-numbers.dots {
   width: 250px;
   vertical-align: top;
   padding: 10px 0;
+}
+.complectations-list table tr td:last-child, .complectaions-content-inner table tbody tr td:last-child {
+  text-align: right;
+}
+.complectations-list table tr td {
+  padding: 10px 0 10px 18px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+}
+.complectations-list table tr td:first-child {
+  background-image: url(../images/li-style.png);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+.complectations-list table tr td:last-child {
+  font-weight: 600;
 }
 .complectation-price {
   flex-grow: 1;
@@ -1696,10 +1724,11 @@ span.page-numbers.dots {
   padding: 11px 0px;
 }
 .buy-house_button-info {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 19px;
   color: #316c48;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
+  max-width: 370px;
 }
 .building-include p {
   font-size: 17px;
@@ -1733,6 +1762,112 @@ span.page-numbers.dots {
   border-radius: 50%;
   margin-top: 6px;
   margin-right: 15px;
+}
+.tab-buttons, .tab-content-inner-top {
+  background-color: #f5f5f5;
+}
+.tab-buttons-name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #666;
+  margin-bottom: 17px;
+}
+.tab-buttons-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.tab-button {
+  font-size: 24px;
+  line-height: 33px;
+  color: #666;
+  border-bottom: 1px solid #666;
+  margin-right: 50px;
+  padding-bottom: 10px;
+}
+.tab-content-inner-top {
+  background-color: #f5f5f5;
+  padding: 20px 0 0;
+  font-size: 0;
+}
+.tab-content-name {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.tab-content-basement-name {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.tab-content-basement-column {
+  display: inline-block;
+  vertical-align: top;
+  width: calc(50% - 13px);
+  margin-right: 26px;
+  margin-bottom: 15px;
+}
+.tab-content-basement-column:nth-child(2n) {
+  margin-right: 0;
+}
+.tab-content-basement-column p {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.tab-content-text ul li, .tab-content-basement-column ul li {
+  list-style: none;
+  background-image: url(../images/li-style.png);
+  background-repeat: no-repeat;
+  background-position: 0 6px;
+  padding: 0 0 0 18px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.tab-content-text h2 {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  color: #666;
+  margin-bottom: 30px;
+}
+.tab-content-text img {
+  display: block;
+  margin: 0 auto;
+}
+.gallery-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+.quote-content {
+  border: 2px solid #316c48;
+  padding: 15px 20px 18px 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.quote-content p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+}
+.tab-content-basement {
+  font-size: 0;
+}
+.tab-content-text p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #666;
+  margin-bottom: 20px;
 }
 .contacts-map {
   position: relative;
