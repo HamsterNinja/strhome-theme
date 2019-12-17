@@ -106,14 +106,6 @@
   .product-information .container {
     display: block;
   }
-  .complectaions-content-inner {
-    overflow: auto;
-  }
-  .complectaions-content-inner table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 470px;
-  }
   a.open-catalog.all-page-link {
     position: relative;
     margin-left: 15px;
@@ -196,6 +188,18 @@
     width: 100%;
   }
 }
+@media (max-width: 580px) {
+  .tab-buttons-content {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(111px, 1fr));
+    justify-content: flex-start;
+    grid-gap: 18px;
+  }
+  .tab-button {
+    margin-right: 0;
+  }
+}
 @media (max-width: 520px) {
   .project-item-info {
     padding: 12px 16px 26px 15px;
@@ -235,5 +239,14 @@
   }
   .main-header-logo {
     width: 180px;
+  }
+  .product-information-column .product-information-column-inner {
+    padding: 17px 10px 40px;
+  }
+  .complectations-list table tr td {
+    font-size: 14px;
+  }
+  .tab-buttons-name {
+    font-size: 22px;
   }
 }

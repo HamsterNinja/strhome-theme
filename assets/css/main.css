@@ -1676,9 +1676,11 @@ span.page-numbers.dots {
   background-image: url(../images/li-style.png);
   background-repeat: no-repeat;
   background-position: 0 50%;
+  width: calc(100% - 130px);
 }
 .complectations-list table tr td:last-child {
   font-weight: 600;
+  width: 130px;
 }
 .complectation-price {
   flex-grow: 1;
@@ -1803,7 +1805,7 @@ span.page-numbers.dots {
 }
 .tab-content-inner-top {
   background-color: #f5f5f5;
-  padding: 20px 0 0;
+  padding: 20px 0 1px;
   font-size: 0;
 }
 .tab-content-name {
@@ -1827,17 +1829,21 @@ span.page-numbers.dots {
   margin-right: 26px;
   margin-bottom: 15px;
 }
+.tab-content-basement-column.w3 {
+  width: calc(33.333% - 20px);
+  margin-right: 12px;
+}
 .tab-content-basement-column:nth-child(2n) {
   margin-right: 0;
 }
-.tab-content-basement-column p {
+.tab-content-basement p {
   font-weight: bold;
   font-size: 16px;
   line-height: 22px;
   color: #666;
   margin-bottom: 15px;
 }
-.tab-content-text ul li, .tab-content-basement-column ul li {
+.tab-content-text ul li, .tab-content-basement ul li {
   list-style: none;
   background-image: url(../images/li-style.png);
   background-repeat: no-repeat;
@@ -2544,14 +2550,6 @@ a.all-page-link.big.fix-width.contacts-link {
   .product-information .container {
     display: block;
   }
-  .complectaions-content-inner {
-    overflow: auto;
-  }
-  .complectaions-content-inner table {
-    border-collapse: collapse;
-    width: 100%;
-    min-width: 470px;
-  }
   a.open-catalog.all-page-link {
     position: relative;
     margin-left: 15px;
@@ -2634,6 +2632,18 @@ a.all-page-link.big.fix-width.contacts-link {
     width: 100%;
   }
 }
+@media (max-width: 580px) {
+  .tab-buttons-content {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(111px, 1fr));
+    justify-content: flex-start;
+    grid-gap: 18px;
+  }
+  .tab-button {
+    margin-right: 0;
+  }
+}
 @media (max-width: 520px) {
   .project-item-info {
     padding: 12px 16px 26px 15px;
@@ -2673,5 +2683,14 @@ a.all-page-link.big.fix-width.contacts-link {
   }
   .main-header-logo {
     width: 180px;
+  }
+  .product-information-column .product-information-column-inner {
+    padding: 17px 10px 40px;
+  }
+  .complectations-list table tr td {
+    font-size: 14px;
+  }
+  .tab-buttons-name {
+    font-size: 22px;
   }
 }

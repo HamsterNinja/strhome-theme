@@ -1286,6 +1286,7 @@ span.page-numbers.dots {
 .complectaions-content-inner table tbody tr td:last-child {
     text-align: right;
 }
+
 .complectations-list table tr td {
     padding: 10px 0 10px 18px;
     font-weight: bold;
@@ -1297,9 +1298,11 @@ span.page-numbers.dots {
     background-image: url(../images/li-style.png);
     background-repeat: no-repeat;
     background-position: 0 50%;
+    width: calc(100% - 130px);
 }
-.complectations-list table tr td:last-child{
+.complectations-list table tr td:last-child {
     font-weight: 600;
+    width: 130px;
 }
 .complectation-price {
     flex-grow: 1;
@@ -1439,8 +1442,8 @@ span.page-numbers.dots {
     display: block;
 }
 .tab-content-inner-top {
-    background-color: #F5F5F5;
-    padding: 20px 0 0;
+    background-color: #f5f5f5;
+    padding: 20px 0 1px;
     font-size: 0;
 }
 .tab-content-name {
@@ -1465,10 +1468,14 @@ span.page-numbers.dots {
     margin-right: 26px;
     margin-bottom: 15px;
 }
+.tab-content-basement-column.w3 {
+    width: calc(33.333% - 20px);
+    margin-right: 12px;
+}
 .tab-content-basement-column:nth-child(2n){
     margin-right: 0;
 }
-.tab-content-basement-column p {
+.tab-content-basement p {
     font-weight: bold;
     font-size: 16px;
     line-height: 22px;
@@ -1476,7 +1483,7 @@ span.page-numbers.dots {
     margin-bottom: 15px;
 }
 .tab-content-text ul li,
-.tab-content-basement-column ul li {
+.tab-content-basement ul li {
     list-style: none;
     background-image: url(../images/li-style.png);
     background-repeat: no-repeat;
