@@ -129,4 +129,14 @@ $(".mobile-menu .menu-item-has-children>a").after('<div class="menu-toggle"><svg
         $(this).parent().find('.sub-menu').slideToggle();
         $(this).toggleClass('active');
     });
-
+$('.tab-button').click(function(event) {
+  event.preventDefault();
+  $('.tab-button').removeClass('active');
+  $(this).addClass('active');
+  
+  var id=$(this).attr('data-id');
+  if (id){
+    $('.tab-content-inner:visible').fadeOut(0);
+    $('.tab-content').find('#'+id).fadeIn('slow');
+    }
+});

@@ -119,6 +119,14 @@ a.open-catalog.all-page-link {
     margin-left: 15px;
     right: 0;
 }
+.tab-button {
+    font-size: 18px;
+    margin-right: 25px;
+}
+.tab-content-inner-top {
+    padding: 20px 0 5px;
+}
+
 }
 @media(max-width: 940px){
 .projects-slick-content.slick-slide {
@@ -155,6 +163,17 @@ a.all-page-link.big.fix-width.contacts-link{
 .total-price-name,
 .total-price-value {
     display: inline;
+}
+.tab-content-basement-column {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.gallery-columns {
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
 }
 }
 @media(max-width: 640px){

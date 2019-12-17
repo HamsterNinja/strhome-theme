@@ -1416,9 +1416,21 @@ span.page-numbers.dots {
     font-size: 24px;
     line-height: 33px;
     color: #666666;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid transparent;
     margin-right: 50px;
     padding-bottom: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.tab-button:hover,
+.tab-button.active {
+    border-color: #666;
+}
+.tab-content-inner{
+    display: none;
+}
+.tab-content-inner:first-child{
+    display: block;
 }
 .tab-content-inner-top {
     background-color: #F5F5F5;
