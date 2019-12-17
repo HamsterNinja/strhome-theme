@@ -1331,14 +1331,15 @@ span.page-numbers.dots {
     color: #666666;
 }
 
+
 .buy-house_button {
     display: block;
     font-size: 15px;
     line-height: 14px;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
-    background: #316C48;
-    border: 1px solid #316C48;
+    color: #fff;
+    background: #316c48;
+    border: 1px solid #316c48;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 60px;
@@ -1347,6 +1348,11 @@ span.page-numbers.dots {
     text-decoration: none;
     text-align: center;
     padding: 11px 0px;
+    transition: 0.3s ease;
+}
+
+.buy-house_button:hover {
+    box-shadow: 0 0 0 rgba(0,0,0,0.25);
 }
 
 .buy-house_button-info {
