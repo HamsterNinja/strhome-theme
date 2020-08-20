@@ -66,18 +66,51 @@
 					 <img src="{{ site.theme.link }}/assets/images/logo.png" alt="">
 				</a>
 			</div>
-     		<div class="main-header-menu">
-     			<ul>
-					{% import 'partials/menus.twig' as menus %}
-					{{ menus.menu_list(menu_header.get_items) }}
-     			</ul>
-     		</div>
+
+			<div class="contacts-block-container">
+				<div class="contacts-block contacts-block--phone">
+					<div class="contacts-block__icon">
+						<img src="{{ site.theme.link }}/assets/images/phone-icon.png" alt="">
+					</div>
+					<div class="contacts-block-wrap">
+						<div class="contacts-block__title">Телефон: с 8:00 до 21:00</div>
+						<div class="contacts-block__value">
+							<a href="tel:+7(906)559-08-07">+7 (906) 559-08-07</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="contacts-block contacts-block--email">
+					<div class="contacts-block__icon">
+						<img src="{{ site.theme.link }}/assets/images/email-icon.png" alt="">
+					</div>
+					<div class="contacts-block-wrap">
+						<div class="contacts-block__title">E-mail:</div>
+						<div class="contacts-block__value">
+							<a href="mailto:domstroi.rf33@gmail.com">domstroi.rf33@gmail.com</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="contacts-block contacts-block--address">
+					<div class="contacts-block__icon">
+						<img src="{{ site.theme.link }}/assets/images/location-icon.png" alt="">
+					</div>
+					<div class="contacts-block-wrap">
+						<div class="contacts-block__title">Наш адрес:</div>
+						<div class="contacts-block__value">
+							г. Владимир, ул.&nbsp;Фатьянова 18а
+						</div>
+					</div>
+				</div>
+			</div>
+
      		<div class="main-header-callback">
 				 <a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
 			</div>
      	</div>
     </header>
-        <header class="main-header mobile">
+    <header class="main-header mobile">
         <div class="container">
         	<div class="main-header-logo">
 				 <a href="{{ site.link }}">
@@ -102,3 +135,10 @@
             </div>
         </div>
     </header>
+
+	<div class="main-header-menu">
+     	<ul>
+			{% import 'partials/menus.twig' as menus %}
+			{{ menus.menu_list(menu_header.get_items) }}
+     	</ul>
+    </div>

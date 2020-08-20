@@ -49,6 +49,27 @@
 		</div>
 	</div>
 </div>
+
+<div class="main-categories">
+    <div class="main-categories-container">
+        <h2 class="main-categories__title">Категории</h2>
+        <div class="main-categories-items">
+            {% for category in Term(product_categories) %}
+                <a href="{{ category.link }}" class="main-categories-item">
+                    {% if category.meta('thumbnail_id') %}
+                        <div class="main-categories-item__image">
+                            <img src="{{ Image(category.meta('thumbnail_id')).src|tojpg }}" alt="">
+                        </div>
+                    {% endif %}
+                    <div class="main-categories-item__title">
+                        {{ category.name }}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
 <div class="building-block">
     <div class="container">
         <div class="main-page-title"><h1>Строительство домов во Владимире</h1></div>
