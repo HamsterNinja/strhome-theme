@@ -620,6 +620,25 @@ select {
   background-position: calc(100% - 15px) 50%;
   cursor: pointer;
 }
+.projects-slick .slick-prev, .projects-slick .slick-next {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.projects-slick .slick-prev svg path, .projects-slick .slick-next svg path {
+  fill: #000;
+}
+.projects-slick .slick-prev {
+  left: 32%;
+}
+.projects-slick .slick-next {
+  right: 32%;
+}
+.projects-slick button.slick-arrow svg {
+  width: 16px;
+  height: 16px;
+}
 .container {
   max-width: 1230px;
   width: 100%;
@@ -640,6 +659,12 @@ select {
 }
 .main-page-title {
   color: #666;
+}
+.main-page-title h1 {
+  font-size: 36px;
+  line-height: 49px;
+  letter-spacing: -0.05em;
+  font-weight: 600;
 }
 .under-title {
   font-size: 18px;
@@ -673,7 +698,32 @@ select {
 .banner-content {
   max-width: 500px;
   background: rgba(255, 255, 255, 0.5);
-  padding: 17px 7px;
+  padding: 17px 27px;
+}
+.block-seo-text-1 ul, .block-seo-text-2 ul {
+  margin: 20px;
+}
+.block-seo-text-2 {
+  width: 49.5%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.block-seo-text-1 {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.tegih h2, .tegih h3, .tegih p {
+  font-size: 16px;
+  display: inline;
+}
+h2.tegih-zagolovok {
+  font-size: 22px;
+  display: block;
 }
 .banner-links {
   margin-bottom: 14px;
@@ -698,7 +748,7 @@ select {
 .banner-title {
   margin-bottom: 24px;
 }
-.banner-title h2 {
+.banner-title span {
   font-size: 48px;
   line-height: 46px;
   letter-spacing: -0.05em;
@@ -709,6 +759,12 @@ select {
   line-height: 17px;
   letter-spacing: -0.05em;
   color: #6c6c6c;
+}
+.seo-text {
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 1000px;
+  margin: 30px auto;
 }
 .main-page-triggers {
   font-size: 0;
@@ -826,13 +882,14 @@ select {
   padding: 20px 0;
 }
 .individual-project {
-  background: #f3f3f3;
+  background: #f7f7f7;
 }
 .individual-project .container {
   background-image: url(../images/individ.jpg);
   background-repeat: no-repeat;
   background-position: 100% 100%;
   padding: 55px 15px;
+  background-size: contain;
 }
 .individual-project-title {
   font-size: 36px;
@@ -1193,23 +1250,25 @@ a.gallery-item:after {
   margin-bottom: 50px;
 }
 a.foundation-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-decoration: none;
-  height: 326px;
   position: relative;
   background-size: cover;
   background-position: 50%;
 }
 .foundation-item-name {
   font-weight: 600;
-  font-size: 30px;
-  line-height: 41px;
+  font-size: 20px;
+  line-height: normal;
   letter-spacing: -0.05em;
-  color: #fff;
-  position: absolute;
-  left: 5px;
-  right: 5px;
+  color: #000;
   text-align: center;
-  bottom: 23px;
+  /*position: absolute;*/
+  /*left: 5px;*/
+  /*right: 5px;*/
+  /*bottom: 23px;*/
 }
 .foundation-prices {
   background-color: #f3f3f3;
@@ -1230,25 +1289,35 @@ a.foundation-item {
   margin: 0;
 }
 .foundation-prices-content {
-  display: grid;
-  grid-gap: 12px;
-  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  /*display: grid;*/
+  /*grid-gap: 12px;*/
+  /*grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));*/
   margin-bottom: 50px;
   margin-top: 40px;
 }
 .foundation-prices-item {
+  display: flex !important;
+  /* Переопределение стилией slick */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 290px;
+  height: 280px;
+  margin: 10px;
+  padding: 18px 30px 25px;
+  /*padding: 18px 38px 25px;*/
   text-align: center;
   background-color: #fff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 18px 38px 25px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .foundation-prices-item-name {
-  font-weight: 600;
+  height: 55px;
+  /* Для одинаковой высоты */
+  margin-bottom: 10px;
+  color: #316c48;
   font-size: 20px;
+  font-weight: 600;
   line-height: 27px;
   letter-spacing: -0.05em;
-  color: #316c48;
-  margin-bottom: 10px;
 }
 .foundation-prices-item-before-value {
   font-size: 14px;
@@ -1274,6 +1343,9 @@ a.foundation-item {
   letter-spacing: -0.05em;
   color: #333;
   margin-bottom: 30px;
+}
+.foundation-prices-content .slick-prev svg path, .foundation-prices-content .slick-next svg path {
+  fill: #f9d508;
 }
 .products-filter {
   padding: 20px 0 10px;
@@ -2028,6 +2100,51 @@ input.contactsSubmit {
   padding: 9px 15px;
   resize: none;
 }
+.page-content.white {
+  padding: 30px 0;
+}
+.list-name {
+  font-weight: 600;
+  color: #000;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.list_city-content ul {
+  margin-bottom: 23px;
+}
+.list_city-content li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 20px 10px 0;
+}
+.list_city {
+  padding: 45px 0;
+  font-size: 0;
+}
+a.js_js_header_list_city {
+  color: #000;
+  font-size: 15px;
+}
+a.js_js_header_list_city:hover {
+  text-decoration: none;
+}
+.foundation-prices-slick svg path {
+  fill: #000;
+}
+img.alignright {
+  float: right;
+  margin-left: 20px;
+}
+img.alignleft {
+  float: left;
+  margin-right: 20px;
+}
+.all-page-text h2 {
+  margin-bottom: 25px;
+}
+.foundation-text-building p {
+  margin: 20px 0;
+}
 .all-page-link {
   font-size: 15px;
   line-height: 20px;
@@ -2036,9 +2153,9 @@ input.contactsSubmit {
   background: #316c48;
   border: 1px solid #316c48;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 60px;
+  border-radius: 5px;
   text-decoration: none;
-  padding: 3px 16px;
+  padding: 11px 16px;
   display: inline-block;
 }
 a.all-page-link.big {
@@ -2169,7 +2286,7 @@ a.all-page-link.big.fix-width.contacts-link {
 }
 .modal-window-container {
   padding: 30px 50px;
-  background: #fff;
+  background: url(../images/form-images.jpg);
 }
 .modal__title {
   font-size: 36px;
@@ -2230,22 +2347,38 @@ a.all-page-link.big.fix-width.contacts-link {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: -0.05em;
-  color: #fff;
+  color: #cee6d7;
   background: #316c48;
   padding: 13px 5px;
   text-align: center;
-  border-right: 1px solid #98b6a3;
-  border-bottom: 1px solid #98b6a3;
+  border-right: 1px solid #47865f;
+  border-bottom: 1px solid #47865f;
+  transition: 0.1s ease;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-header-menu ul li a:hover {
+  background: #245236;
+  color: #fff;
 }
 .main-header-menu ul li:first-child a {
-  border-radius: 25px 0 0 25px;
+  border-radius: 5px 0 0 5px;
+}
+.main-header-callback .all-page-link {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  color: #fff;
+  background: #e45050;
+  border: 1px solid #e45050;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 13px 25px;
+  display: inline-block;
 }
 .main-header-menu ul li:last-child a {
-  border-radius: 0 25px 25px 0;
+  border-radius: 0 5px 5px 0;
   border-right: 0;
-}
-.main-header-menu ul li:first-child:hover a {
-  border-radius: 25px 0 0 0;
 }
 .main-header-menu ul.sub-menu {
   position: absolute;
@@ -2268,7 +2401,7 @@ a.all-page-link.big.fix-width.contacts-link {
   border-radius: 0 !important;
   padding: 7px 5px 7px 25px;
   text-align: left;
-  border-top: 1px solid #98b6a3;
+  border-top: 1px solid #47865f;
   border-bottom: none;
   border-right: none;
 }
@@ -2442,6 +2575,22 @@ a.all-page-link.big.fix-width.contacts-link {
   color: #7c7c7c;
   text-decoration: none;
 }
+@media (max-width: 1400px) {
+  .projects-slick .slick-prev {
+    left: 24%;
+  }
+  .projects-slick .slick-next {
+    right: 24%;
+  }
+}
+@media (max-width: 1280px) {
+  .projects-slick .slick-prev {
+    left: 18%;
+  }
+  .projects-slick .slick-next {
+    right: 18%;
+  }
+}
 @media (max-width: 1180px) {
   .main-header-callback {
     margin-left: 50px;
@@ -2574,6 +2723,12 @@ a.all-page-link.big.fix-width.contacts-link {
     max-width: 100%;
     margin: 30px auto;
   }
+  .projects-slick .slick-prev {
+    left: 3px;
+  }
+  .projects-slick .slick-next {
+    right: 3px;
+  }
 }
 @media (max-width: 820px) {
   .contacts_block-phone, .contacts_block-phone a {
@@ -2586,6 +2741,9 @@ a.all-page-link.big.fix-width.contacts-link {
   }
   a.all-page-link.big.fix-width.contacts-link {
     display: none;
+  }
+  .block-seo-text-2 {
+    width: 100%;
   }
   .total-price {
     margin-bottom: 30px;
@@ -2607,6 +2765,9 @@ a.all-page-link.big.fix-width.contacts-link {
     display: block;
     grid-template-columns: 1fr 1fr;
     grid-gap: 25px;
+  }
+  .under-footer .container {
+    display: block;
   }
 }
 @media (max-width: 640px) {
@@ -2668,10 +2829,6 @@ a.all-page-link.big.fix-width.contacts-link {
   }
 }
 @media (max-width: 420px) {
-  a.foundation-item {
-    height: 176px;
-    background-size: cover;
-  }
   .contacts_block-phone {
     text-align: center;
   }

@@ -1,0 +1,22 @@
+{% include "partials/header.twig" %}
+<div class="seo-title">
+        <div class="container">
+            <h1>{{ post.title}}</h1>
+        </div>
+    </div>
+    <div class="product-description">
+	<div class="container">
+		<div class="list_city-content">
+			<ul>
+				{% for post in cities %}
+				<li>
+					<a class="js_js_header_list_city" href="{{post.link}}">
+						Строительство домов {{ post.в_городе }}
+					</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+{% include "partials/footer.twig" %}

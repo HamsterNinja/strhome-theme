@@ -1,0 +1,17 @@
+{% include "partials/header.twig" %}
+<main class='main-content'>
+    <div class="seo-title">
+        <div class="container">
+            <h1>{{ post.title}}</h1>
+        </div>
+    </div>
+    <div class="product-description">
+        <div class="container">
+{#            <img src="{{ post.thumbnail }}" alt="" class="post-image">#}
+            <div class="all-page-text">
+                {{ post.get_content|shortcodes }}
+            </div>
+        </div>
+    </div>
+</main>
+{% include "partials/footer.twig" %}

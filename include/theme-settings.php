@@ -9,3 +9,13 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false
     ));
 }
+
+add_action( 'init', 'create_my_post_types' );
+function create_my_post_types() {
+    register_post_type(
+    'city',
+    array('labels' => array( 'name' => __( 'Города' ),
+    'singular_name' => __( 'Город' ) ),
+    'supports'      => array( 'title', 'thumbnail'),
+    'public' => true, ) );
+}

@@ -49,6 +49,31 @@ select {
     cursor: pointer;
 }
 
+.projects-slick .slick-prev,
+.projects-slick .slick-next {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+
+.projects-slick .slick-prev svg path,
+.projects-slick .slick-next svg path {
+    fill: #000;
+}
+
+.projects-slick .slick-prev {
+    left: 32%;
+}
+
+.projects-slick .slick-next {
+    right: 32%;
+}
+
+.projects-slick button.slick-arrow svg {
+    width: 16px;
+    height: 16px;
+}
 .container {
     max-width: 1230px;
     width: 100%;
@@ -76,7 +101,12 @@ select {
 .main-page-title {
     color: #666666;
 }
-
+.main-page-title h1{
+    font-size: 36px;
+    line-height: 49px;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+}
 .under-title {
     font-size: 18px;
     line-height: 17px;
@@ -115,8 +145,39 @@ select {
 .banner-content {
     max-width: 500px;
     background: rgba(255, 255, 255, 0.5);
-    padding: 17px 7px;
+    padding: 17px 27px;
 }
+
+.block-seo-text-1 ul, .block-seo-text-2 ul {
+    margin: 20px;
+}
+
+.block-seo-text-2 {
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.block-seo-text-1 {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tegih h2, .tegih h3, .tegih p{
+    font-size:16px;
+    display:inline;   
+}
+
+h2.tegih-zagolovok{
+    font-size:22px;
+    display:block;
+}
+
 
 .banner-links {
     margin-bottom: 14px;
@@ -146,7 +207,7 @@ select {
     margin-bottom: 24px;
 }
 
-.banner-title h2 {
+.banner-title span {
     font-size: 48px;
     line-height: 46px;
     letter-spacing: -0.05em;
@@ -158,6 +219,13 @@ select {
     line-height: 17px;
     letter-spacing: -0.05em;
     color: #6C6C6C;
+}
+
+.seo-text {
+    font-size: 16px;
+    line-height: 1.4;
+    max-width: 1000px;
+    margin: 30px auto;
 }
 
 .main-page-triggers {
@@ -297,7 +365,7 @@ select {
 }
 
 .individual-project {
-    background: #f3f3f3;
+    background: #f7f7f7;
 }
 
 .individual-project .container {
@@ -305,6 +373,7 @@ select {
     background-repeat: no-repeat;
     background-position: 100% 100%;
     padding: 55px 15px;
+    background-size: contain;
 }
 
 .individual-project-title {
@@ -732,24 +801,27 @@ a.gallery-item:after {
 }
 
 a.foundation-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     text-decoration: none;
-    height: 326px;
     position: relative;
     background-size: cover;
-    background-position: 50%; 
+    background-position: 50%;
 }
 
 .foundation-item-name {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 41px;
+    font-size: 20px;
+    line-height: normal;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
-    position: absolute;
-    left: 5px;
-    right: 5px;
+    color: #000;
     text-align: center;
-    bottom: 23px;
+    /*position: absolute;*/
+    /*left: 5px;*/
+    /*right: 5px;*/
+    /*bottom: 23px;*/
 }
 
 .foundation-prices {
@@ -766,7 +838,7 @@ a.foundation-item {
 .foundation-text p {
     font-size: 14px;
     line-height: 19px;
-    color: #333333;
+    color: #333;
     margin-bottom: 20px;
 }
 
@@ -775,27 +847,38 @@ a.foundation-item {
 }
 
 .foundation-prices-content {
-    display: grid;
-    grid-gap: 12px;
-    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+    /*display: grid;*/
+    /*grid-gap: 12px;*/
+    /*grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));*/
     margin-bottom: 50px;
     margin-top: 40px;
 }
 
 .foundation-prices-item {
+    display: flex !important;
+    /* Переопределение стилией slick */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 290px;
+    height: 280px;
+    margin: 10px;
+
+    padding: 18px 30px 25px;
+    /*padding: 18px 38px 25px;*/
     text-align: center;
     background-color: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 18px 38px 25px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .foundation-prices-item-name {
-    font-weight: 600;
+    height: 55px;
+    /* Для одинаковой высоты */
+    margin-bottom: 10px;
+    color: #316c48;
     font-size: 20px;
+    font-weight: 600;
     line-height: 27px;
     letter-spacing: -0.05em;
-    color: #316C48;
-    margin-bottom: 10px;
 }
 
 .foundation-prices-item-before-value {
@@ -803,7 +886,7 @@ a.foundation-item {
     line-height: 19px;
     text-align: center;
     letter-spacing: -0.05em;
-    color: #333333;
+    color: #333;
     margin-bottom: 3px;
 }
 
@@ -813,7 +896,7 @@ a.foundation-item {
     line-height: 49px;
     text-align: center;
     letter-spacing: -0.05em;
-    color: #316C48;
+    color: #316c48;
     margin-bottom: 3px;
 }
 
@@ -822,10 +905,14 @@ a.foundation-item {
     line-height: 19px;
     text-align: center;
     letter-spacing: -0.05em;
-    color: #333333;
+    color: #333;
     margin-bottom: 30px;
 }
 
+.foundation-prices-content .slick-prev svg path,
+.foundation-prices-content .slick-next svg path {
+    fill: #f9d508;
+}
 .products-filter {
     padding: 20px 0 10px;
     background-color: #f3f3f3;
@@ -1689,7 +1776,53 @@ input.contactsSubmit {
     padding: 9px 15px;
     resize: none;
 }
+    .page-content.white{
+        padding: 30px 0;
+    }
+    .list-name{
+        font-weight: 600;
+        color: #000;
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    .list_city-content ul {
+    margin-bottom: 23px;
+ }
+    .list_city-content li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 20px 10px 0;
+    }
+    .list_city{
+    padding: 45px 0;
+    font-size: 0;
+    }
+    a.js_js_header_list_city {
+    color: #000;
+    font-size: 15px;
+    }
+    a.js_js_header_list_city:hover{
+    text-decoration: none;
+    }
 
+    .foundation-prices-slick svg path {
+    	fill: #000;
+}
+
+img.alignright {
+    float: right;
+    margin-left: 20px;
+}
+img.alignleft {
+    float: left;
+    margin-right: 20px;
+}
+.all-page-text h2 {
+    margin-bottom: 25px;
+}
+.foundation-text-building p{
+    margin: 20px 0;
+}
 @import 'pages/home';
 @import 'components/buttons';
 @import 'components/modal';

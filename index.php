@@ -4,6 +4,7 @@ $context          = Timber::context();
 $context['posts'] = new Timber\PostQuery();
 $context['foo']   = 'bar';
 $templates        = array( 'index.twig' );
+
 if ( is_home() ) {
 
 	$args_news = array(
@@ -20,6 +21,8 @@ if ( is_home() ) {
 
 	$banners = get_field('banners', 'options');
 	$context['banners'] = $banners;
+
+
 
 	array_unshift( $templates, 'front-page.twig', 'home.twig' );
 }

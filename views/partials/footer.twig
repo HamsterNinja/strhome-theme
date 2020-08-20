@@ -4,7 +4,7 @@
 			<div class="footer-content-info">
 				<div class="footer-logo">
 					<a href="#">
-						<img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
+						<img src="{{ site.theme.link }}/assets/images/logo.png" alt="">
 					</a>
 				</div>
 				<div class="footer-phone"><a href="tel:{{ phone }}">{{ phone }}</a></div>
@@ -12,7 +12,7 @@
 					<a class="all-page-link" href="#" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
 				</div>
 				<div class="footer-contacts">
-					<p>125445 г. Москва, Ленинградское шоссе, д. 69, корп. 1, БЦ River City, этаж 5, офис 55</p>
+					<p>г. Владимир, ул. Фатьянова 18а</p>
 					<p>
 						Тел./факс: {{ phone }}<br>	
 						E-mail: {{ mail }}
@@ -41,6 +41,7 @@
 	</div>
 	<div class="under-footer">
 		<div class="container">
+			<div class="under-footer-link"><a href="{{ site.link }}/goroda">Города</a></div>
 			<div class="under-footer-link"><a href="{{ site.link }}/sitemap">Карта сайта</a></div>
 			<div class="under-footer-link"><a href="{{ site.link }}/privacy-policy">Политика конфиденциальности</a></div>
 			<div class="under-footer-link"><a href="https://is-art.ru/" target="_blank" rel="noopener">Сайт разработан студией IS ART</a></div>
@@ -51,6 +52,8 @@
 {% include "partials/modal.twig" %}
 </div>
 {{ function('wp_footer') }}
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 </body>
 
 </html>

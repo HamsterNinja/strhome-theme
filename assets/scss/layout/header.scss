@@ -36,26 +36,44 @@
     font-size: 18px;
     line-height: 25px;
     letter-spacing: -0.05em;
-    color: #FFFFFF;
+    color: #cee6d7;
     background: #316C48;
     padding: 13px 5px;
     text-align: center;
-    border-right: 1px solid #98B6A3;
-    border-bottom: 1px solid #98B6A3;
+    border-right: 1px solid #47865f;
+    border-bottom: 1px solid #47865f;
+    transition: 0.1s ease;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-header-menu ul li a:hover {
+    background: #245236;
+    color: #fff;
+}
+.main-header-menu ul li:first-child a {
+    border-radius: 5px 0 0 5px;
 }
 
-.main-header-menu ul li:first-child a {
-    border-radius: 25px 0 0 25px;
+
+.main-header-callback .all-page-link {
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.05em;
+    color: #ffffff;
+    background: #e45050;
+    border: 1px solid #e45050;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 13px 25px;
+    display: inline-block;
 }
 
 .main-header-menu ul li:last-child a {
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 5px 5px 0;
     border-right: 0;
 }
 
-.main-header-menu ul li:first-child:hover a {
-    border-radius: 25px 0 0 0;
-}
+
 
 .main-header-menu ul.sub-menu {
     position: absolute;
@@ -81,7 +99,7 @@
     border-radius: 0 !important;
     padding: 7px 5px 7px 25px;
     text-align: left;
-    border-top: 1px solid #98B6A3;
+    border-top: 1px solid #47865f;
     border-bottom: none;
     border-right: none;
 }

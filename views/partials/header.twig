@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(61988374, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/61988374" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
 <html {{ site.language_attributes }}>
 	<head>
 		<meta charset="{{ site.charset }}" />
@@ -35,6 +53,7 @@
 		<link rel="author" href="{{ site.theme.link }}/humans.txt" />
 		<link rel="pingback" href="{{ site.pingback_url }}" />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 		{{function('wp_head')}}
 </head>
 
@@ -44,7 +63,7 @@
      	<div class="container">
      		<div class="main-header-logo">
 				 <a href="{{ site.link }}">
-					 <img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
+					 <img src="{{ site.theme.link }}/assets/images/logo.png" alt="">
 				</a>
 			</div>
      		<div class="main-header-menu">
@@ -62,7 +81,7 @@
         <div class="container">
         	<div class="main-header-logo">
 				 <a href="{{ site.link }}">
-					 <img src="{{ site.theme.link }}/assets/images/logo.svg" alt="">
+					 <img src="{{ site.theme.link }}/assets/images/logo.png" alt="">
 				</a>
 			</div>
             <button class="btn-hamburger btn-hamburger-1 js_hamburger"><span></span></button>

@@ -2,14 +2,14 @@
 <main class='main-content'>
 	<div class="seo-title">
 		<div class="container">
-			<h1>Дома из кирпича под ключ</h1>
+			<h1>{{ post.title }}</h1>
 		</div>
 	</div>
 	<div class="page-info_block">
 		<div class="container">
-			<div class="all-page-title">О строительстве</div>
+			<div class="all-page-title">{{ top_title }}</div>
 			<div class="page-info_block-text">
-				<p>Строительство частного дома должно включать целый комплекс работ и учитывать, как дизайн будущего строения, так и территориальные особенности. Будущий проект обязательно адаптируется после проведения и получения важных и необходимых изысканий участка, технических и инженерных работ, расчетов, без которых невозможно реализовать качественное строение с соблюдением требований СНиПа. Поручив строительство кирпичного дома нашей фирме, мы обязательно воплотим ваши фантазии и желания и найдем оптимальный компромисс с финансовыми возможностями.</p>
+				{{ top_text }}
 			</div>
 		</div>
 	</div>
@@ -23,27 +23,29 @@
 		<div class="container">
 			<div class="all-page-title">Галерея проводимых нами работ</div>
 			<div class="gallery-works-inner">
-				{% for item in 0..7 %}
-					<a class="gallery-item" href=""><img src="{{ site.theme.link }}/assets/images/work.jpg" alt=""></a>
+				{% for image in gallery %}
+					<a data-fancybox="" class="gallery-item" href="{{ Image(image) }}"><img src="{{ Image(image) }}" alt=""></a>
 				{% endfor %}
 			</div>
 		</div>
 	</div>
 	<div class="our-works">
 		<div class="container">
-			<div class="all-page-title" style="margin-bottom: 50px;">Проекты домов из кирпича</div>
+			<div class="all-page-title" style="margin-bottom: 50px;">Проекты домов</div>
 			<div class="our-works-inner">
-				{% for item in 0..5 %}
-					<a href="" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url({{ site.theme.link }}/assets/images/work.jpg)">
-						<div class="our-works-item-content">
-							<div class="our-works-item-name">ПРОЕКТ ДОМА «КЁЛЬН»</div>
-							<div class="our-works-item-info">
-								<div class="our-works-item-size">212,4 М2</div>
-								<div class="our-works-item-price">45 000 P</div>
-							</div>
-						</div>
-					</a>
-				{% endfor %}
+
+                {% for post in random_prod %}
+				
+					<a href="{{ post.link }}" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url({{ post.thumbnail.src }})">
+                            <div class="our-works-item-content">
+                                <div class="our-works-item-name">{{ post.title }}</div>
+                                <div class="our-works-item-info">
+                                    <div class="our-works-item-size">{{ post.get_field("общая_площадь") }} М2</div>
+                                    <div class="our-works-item-price">от {{ post.get_field("минимальная_стоимость") }} P</div>
+                                </div>
+                            </div>
+                        </a>
+                {% endfor %}    
 			</div>
 			<a href="" class="all-page-link big view-all">Все проекты</a>
 		</div>
@@ -54,28 +56,16 @@
 			<div class="individual-project_block-title">Индивидуальный проект</div>
 			<div class="individual-project_block-text">Если вы не можете найти подходящий Вам дом, наша компания всегда рада прислушаться к каждому пожеланию заказчика и создать уникальный проект дома отвечающий всем вашим требованиям.</div>
 			<div class="individual-project_block-links">
-				<a href="" class="all-page-link big fix-width">Типовые проекты</a>
-				<a href="" class="all-page-link big fix-width">О проектировании</a>
-				<a href="" class="all-page-link big fix-width">Оставить заявку</a>
+				<a href="{{ site.link }}/product-category/proekty-domov/" class="all-page-link big fix-width">Типовые проекты</a>
+				<a href="" class="all-page-link big fix-width" v-on:click.prevent="showModal('modal-window--callback')">Оставить заявку</a>
 			</div>
 		</div>
 	</div>
 	<div class="construction-stages">
 		<div class="container">
-			<div class="all-page-title">Этапы строительства дома</div>
+			<div class="all-page-title">{{ bottom_title }}</div>
 			<div class="all-page-text">
-				<p>Одним из важнейших этапов решения такой не простой задачи как строительство домов и коттеджей является разработка проектной документации. В рамках данного этапа определяют месторасположение объекта на участке, создают архитектурный проект, определяют материалы, технологии строительства, типы конструкций и узлы сопряжения конструктивных элементов, рассчитывается несущая способность фундамента, перекрытий, стен и кровли.</p>
-				<p>Начальным этапом строительства коттеджей и домов является закладка фундамента. Об особенностях, достоинствах и недостатках каждого из типов фундамента наши специалисты расскажут вам на этапе составления проекта под строительство дома. В ходе этапа возведения стен при строительстве дома будущий владелец может выбрать кирпичную кладку, газобетонные или крупноформатные керамические блоки, а также заказать строительство домов из профилированного бруса или оцилиндрованного бревна</p>
-				<p>Заключительный этап строительства — монтаж крыши. Основой кровли является стропильная система, когда производится проектирование и строительство коттеджей, очень важно произвести правильные расчеты стропильной системы, обеспечивающей кровле надежность и долговечность. При расчетах учитывается тип кровельного материала, размер и форма крыши, а также климатические особенности местности, где производится строительство домов. В процессе монтажа мы уделяем особое внимание обеспечению тепло- и гидроизоляции.</p>
-				<p>Строительство жилых домов и дач: финишный этап. Именно прокладка коммуникаций делает дом жилым помещением. В комплекс работ может входить:</p>
-				<ul>
-					<li>электропроводка,</li>
-					<li>монтаж теплосети,</li>
-					<li>водопроводные сети,</li>
-					<li>канализация,</li>
-					<li>системы вентиляции и кондиционирования.</li>
-				</ul>
-				<p>Строительство домов во Владимире проводится квалифицированными специалистами, мы используем качественные материалы, надежную строительную технику и современные технологии.</p>
+				{{ bottom_text }}
 			</div>
 		</div>
 	</div>

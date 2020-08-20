@@ -14,9 +14,9 @@
 					<p>Эти части зданий не находятся на виду, но именно они несут на себе их вес, защищая от проседания конструкции домов. По правилам закладку фундаментов для различных строений проводят на такой глубине, которая исключает промерзание почвы.</p>
 				</div>
 				<div class="who-we-are_short-links">
-					<a href="#" class="all-page-link big fix-width">Цены</a>
-					<a href="#" class="all-page-link big fix-width">Типы фундамента</a>
-					<a href="#" class="all-page-link big fix-width">Наши работы</a>
+					<a href="#prices" class="all-page-link big fix-width">Цены</a>
+					<a href="#foundation" class="all-page-link big fix-width">Типы фундамента</a>
+					<a href="#gallery" class="all-page-link big fix-width">Наши работы</a>
 					<a href="#" class="all-page-link big fix-width" v-on:click.prevent="showModal('modal-window--callback')">Обратный звонок</a>
 				</div>
 			</div>
@@ -25,14 +25,15 @@
 			</div>
 		</div>
 	</div>
-	<div class="foundation-catalog">
+	<div class="foundation-catalog" id="foundation">
 		<div class="container">
 			<div class="all-page-title">Виды фундаментов</div>
 			<div class="under-title">Классификация фундаментов весьма обширна. Но на практике чаще всего применяются следующие их варианты:</div>
 			<div class="our-works-inner">
-				{% for item in 0..5 %}
-					<a href="" class="foundation-item" style="background-image: url({{ site.theme.link }}/assets/images/foun-1.jpg)">
-						<div class="foundation-item-name">Блочный</div>
+				{% for item in Post(foundation)%}
+					<a href="{{ item.link }}" class="foundation-item">
+                        <img src="{{ item.thumbnail }}" alt="{{ item.title }}" class="foundation-item-thumbnail">
+						<div class="foundation-item-name">{{ item.title }}</div>
 					</a>
 				{% endfor %}
 			</div>
@@ -41,20 +42,20 @@
 			</div>
 		</div>
 	</div>
-	<div class="foundation-prices">
+	<div class="foundation-prices" id="prices">
 		<div class="container">
 			<div class="all-page-title"><h2>Стоимость устройства фундамента</h2></div>
 			<div class="foundation-text">
 				<p>Стремление людей не экономить на фундаменте продиктовано здравым смыслом. Действительно, трещина, пошедшая по стене, уничтожит и дорогие окна, двери, и отнюдь не дешевые виды внешней и внутренней отделки. Лучше положиться на опыт профессионалов, которые сделают свою работу быстро, качественно и не доведут семейный бюджет до банкротства. Кстати, само по себе строительство фундамента под ключ, подразумевающее выполнение всех работ одной компанией, уже существенно снижает его цену.</p>
 			</div>
-			<div class="foundation-prices-content">
-				{% for item in 0..3 %}
+			<div class="foundation-prices-slick">
+				{% for item in Post(foundation) %}
 					<div class="foundation-prices-item">
-						<div class="foundation-prices-item-name">ЛЕНТОЧНЫЙ ФУНДАМЕНТ</div>
+						<div class="foundation-prices-item-name">{{ item.title }}</div>
 						<div class="foundation-prices-item-before-value">от</div>
-						<div class="foundation-prices-item-value">12 000 ₽</div>
-						<div class="foundation-prices-item-after-value">за куб. м.</div>
-						<div class="foundation-prices-item-link"><a class="all-page-link big full-width no-margin" href="">Побробнее</a></div>
+						<div class="foundation-prices-item-value">{{ item.foundation_price }} ₽</div>
+						<div class="foundation-prices-item-after-value">за {{ Post(item).meta('foundation_price-type') }}</div>
+						<div class="foundation-prices-item-link"><a class="all-page-link big full-width no-margin" href="{{ item.link }}">Подробнее</a></div>
 					</div>
 				{% endfor %}
 			</div>
@@ -69,14 +70,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="gallery-works">
+	<div class="gallery-works" id="gallery">
 		<div class="container">
 			<div class="all-page-title">Наши работы</div>
 			<div class="gallery-works-inner">
-				{% for item in 0..7 %}
-					<a class="gallery-item" href=""><img src="{{ site.theme.link }}/assets/images/work.jpg" alt=""></a>
-				{% endfor %}
-			</div>
+                {% for image in gallery %}
+                    <a data-fancybox="" class="gallery-item" href="{{ Image(image) }}"><img src="{{ Image(image) }}" alt=""></a>
+                {% endfor %}
+            </div>
 		</div>
 	</div>
 </main>

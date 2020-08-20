@@ -2,10 +2,10 @@
 <main class='main-content'>
 	<div class="seo-title">
 		<div class="container">
-			<h1>Проекты домов</h1>
+			<h1>{{ title }}</h1>
 		</div>
 	</div>
-	<div class="products-filter">
+	<!-- <div class="products-filter">
 		<div class="container">
 			<form action="">
 				<div class="filter-row">
@@ -41,18 +41,18 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="our-works">
 		<div class="container">
 			<div class="our-works-inner">
 				{% if posts is not empty  %}
 					{% for post in posts %}
-						<a href="{{ post.link }}" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url({{ site.theme.link }}/assets/images/work.jpg)">
+						<a href="{{ post.link }}" class="our-works-item" style="background: linear-gradient(360deg, #000000 3.07%, rgba(89, 89, 89, 0) 43.4%),url({{ post.thumbnail.src }})">
 							<div class="our-works-item-content">
 								<div class="our-works-item-name">{{ post.title }}</div>
 								<div class="our-works-item-info">
-									<div class="our-works-item-size">212,4 М2</div>
-									<div class="our-works-item-price">45 000 P</div>
+									<div class="our-works-item-size">{{ post.get_field("общая_площадь") }} М2</div>
+									<div class="our-works-item-price">от {{ post.get_field("минимальная_стоимость") }} P</div>
 								</div>
 							</div>
 						</a>
@@ -63,17 +63,7 @@
 					</div>
 				{% endif %}
 			</div>
-			<nav class="navigation pagination">
-				<ul class="nav-links vue-pagination">
-					<span aria-current="page" class="page-numbers page-number page-numbers current">1</span>
-					<li class="page-numbers page-number page-numbers"><a href="">2</a></li> 
-					<li class="page-numbers page-number page-numbers"><a href="">3</a></li>
-					<li class="page-numbers page-number page-numbers"><a href="">4</a></li>
-					<span aria-current="page" class="page-numbers dots">…</span>
-					<li class="page-numbers page-number page-numbers"><a href="">16</a></li>
-					<li class="page-numbers page-number page-numbers"><a href="">17</a></li>
-				</ul>
-			</nav>
+			{% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
 		</div>
 	</div>
 
