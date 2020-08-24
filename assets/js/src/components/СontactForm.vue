@@ -84,6 +84,14 @@ export default {
                 overlay.classList.add('overlay--show');
             }
         },
+        closeModal: () => {
+            const overlay = document.querySelector(".overlay");
+            const modals = document.querySelectorAll(".modal-window");
+            modals.forEach((modal) => {
+                modal.classList.remove("modal--show");
+                overlay.classList.remove("overlay--show");
+            });
+        },
         async submitContactForm(){
             this.form.submitted = true;
             this.$v.form.$touch()
@@ -112,7 +120,8 @@ export default {
                     this.form.submitStatus = 'SUCCESS';
                     this.clearForm();
                     setTimeout(() => {this.form.submitStatus = ''}, 1000);
-                    setTimeout(() => {this.showModal('modal-window--thank')}, 1500);
+                    setTimeout(() => {this.closeModal()}, 1200);
+                    setTimeout(() => {this.showModal('modal-window--thanks')}, 1500);
                 }
                 else{
                     this.form.submitStatus = 'ERROR';
