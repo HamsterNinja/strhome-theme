@@ -1941,6 +1941,10 @@ img.alignleft {
     position: relative;
 }
 
+.modal-window--callback .error {
+    color: #ffffff;
+}
+
 @import "components/buttons";
 @import "components/modal";
 @import "header";

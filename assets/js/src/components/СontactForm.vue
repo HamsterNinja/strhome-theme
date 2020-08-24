@@ -5,19 +5,16 @@
             <div class="error" v-if="form.submitted && !$v.form.name.required">Имя обязательно</div>
         </div>
 
-        <div class="form-group" :class="{ 'input--error': form.submitted && $v.form.email.$error }">
-            <input v-model="form.email" aria-label="E-mail" type="text" placeholder="E-mail*" class="join_input gtzm">
-            <div class="error" v-if="form.submitted && !$v.form.email.required">Требуется электронная почта</div>
-            <div class="error" v-if="form.submitted && !$v.form.email.email">E-mail не является правильно отформатированным адресом электронной почты</div>
+        <div class="form-group">
+            <input v-model="form.email" aria-label="E-mail" type="text" placeholder="E-mail" class="join_input gtzm">
+        </div>
+
+        <div class="form-group" :class="{ 'input--error': form.submitted && $v.form.phone.$error }">
+            <masked-input class="join_input gtzm" type="phone" name="phone" v-model.trim="$v.form.phone.$model" placeholder="Номер телефона*" mask="\+\7 (111) 111-11-11" @focus.native="focusPhone = true"></masked-input>
         </div>
 
         <div class="form-group">
-            <input v-model="form.phone" aria-label="Номер телефона" type="text" placeholder="Номер телефона" class="join_input gtzm">
-        </div>
-
-        <div class="form-group" :class="{ 'input--error': form.submitted && $v.form.message.$error }">
-            <textarea v-model="form.message" aria-label="Сообщение" type="text" placeholder="Сообщение*" class="join_input gtzm"></textarea>
-            <div class="error" v-if="form.submitted && !$v.form.message.required">Сообщение обязательно</div>
+            <textarea v-model="form.message" aria-label="Сообщение" type="text" placeholder="Сообщение" class="join_input gtzm"></textarea>
         </div>
 
         <div class="join-form-buttons">
@@ -45,6 +42,7 @@ export default {
     data() {
         return {
             template_url: SITEDATA.themepath,
+            focusPhone: false,
             form: {
                 submitted: false,
                 submitStatus: '',
@@ -57,14 +55,10 @@ export default {
     },
     validations: {
         form: {
-            email: {
-                required,
-                email 
-            },
             name: {
                 required
             },
-            message: {
+            phone: {
                 required
             }
         }

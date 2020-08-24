@@ -3,7 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require_once ('include/PHPMailer/src/Exception.php');
 require_once ('include/PHPMailer/src/PHPMailer.php');
-require('../../../wp-load.php');
+ 
 
 if ($_POST){
 
@@ -23,7 +23,7 @@ if ($first_name) {
 }
 
 if ($last_name) {
-  $bodytext .= "<p>Last Name - ".$last_name."</p>";
+  $bodtext .= "<p>Last Name - ".$last_name."</p>";
 }
 
 if ($email) {
@@ -38,7 +38,7 @@ if ($message) {
   $bodytext .= "<p>Message - ".$message."</p>";
 }
 
-$admin_email = get_option('admin_email');
+$admin_email = 'domstroi.rf33@gmail.com';
 
 $email = new PHPMailer(true);
 try {
@@ -53,7 +53,7 @@ try {
   $email->CharSet = 'utf-8';
   $email->ClearAllRecipients();
   $email->From      = $admin_email;
-  $email->FromName  = 'rumla';
+  $email->FromName  = 'strhome';
   $email->Subject   = 'Заявка с сайта';
   $email->Body      = $bodytext;
   $email->addAddress($admin_email);  

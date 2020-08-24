@@ -2243,6 +2243,9 @@ img.alignleft {
 .question-block-text {
   position: relative;
 }
+.modal-window--callback .error {
+  color: #fff;
+}
 .all-page-link {
   font-size: 15px;
   line-height: 20px;

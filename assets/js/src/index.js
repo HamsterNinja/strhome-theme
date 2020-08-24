@@ -8,6 +8,9 @@ import store from "./store";
 import Vuelidate from "vuelidate";
 Vue.use(Vuelidate);
 
+import MaskedInput from 'vue-masked-input'
+Vue.component('masked-input', MaskedInput)
+
 import СontactForm from "./components/СontactForm.vue";
 Vue.component("contact-form", СontactForm);
 
