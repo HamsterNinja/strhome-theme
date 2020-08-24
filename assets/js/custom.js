@@ -36,4 +36,9 @@ $(document).ready(function () {
             }
         ]
   });
+  $('.question-block__button').click(function (event) {
+    let text = $('.question-block__textarea').val()
+    let url = `https://api.whatsapp.com/send?phone=79065590807&text=${text}`
+    window.open(url, '_blank');
+  });
 })
