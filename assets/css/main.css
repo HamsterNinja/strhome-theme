@@ -2400,6 +2400,7 @@ a.all-page-link.big.fix-width.contacts-link {
 }
 .modal__title.modal__title--thanks {
   color: #fff;
+  text-shadow: 1px 1px 1px #000;
 }
 .modal-login-error {
   text-align: center;
