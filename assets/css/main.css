@@ -2379,6 +2379,9 @@ a.all-page-link.big.fix-width.contacts-link {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s;
+  background-image: url(../images/form-images.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .modal-window.modal--show {
   display: block;
@@ -2387,9 +2390,6 @@ a.all-page-link.big.fix-width.contacts-link {
 }
 .modal-window-container {
   padding: 30px 50px;
-  background: url(../images/form-images.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .modal__title {
   font-size: 36px;
@@ -2397,6 +2397,9 @@ a.all-page-link.big.fix-width.contacts-link {
   text-align: center;
   margin-bottom: 20px;
   display: block;
+}
+.modal__title.modal__title--thanks {
+  color: #fff;
 }
 .modal-login-error {
   text-align: center;

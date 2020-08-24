@@ -63,6 +63,10 @@
     transform: translate(-50%, -50%);
     transition: 0.3s;
 
+    background-image: url(../images/form-images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     &.modal--show {
         display: block;
         opacity: 1;
@@ -72,9 +76,6 @@
 
 .modal-window-container {
     padding: 30px 50px;
-    background: url(../images/form-images.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .modal__title {
@@ -83,6 +84,10 @@
     text-align: center;
     margin-bottom: 20px;
     display: block;
+}
+
+.modal__title.modal__title--thanks {
+    color: #fff;
 }
 
 .modal-login-error {
