@@ -73,6 +73,8 @@
 .modal-window-container {
     padding: 30px 50px;
     background: url(../images/form-images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .modal__title {
@@ -96,6 +98,7 @@
     margin-top: -8px;
     text-align: left;
     margin-left: 17px;
+    margin-bottom: 10px;
 }
 
 .form-group.input--error input {

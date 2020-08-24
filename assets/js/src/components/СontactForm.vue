@@ -11,6 +11,8 @@
 
         <div class="form-group" :class="{ 'input--error': form.submitted && $v.form.phone.$error }">
             <masked-input class="join_input gtzm" type="phone" name="phone" v-model.trim="$v.form.phone.$model" placeholder="Номер телефона*" mask="\+\7 (111) 111-11-11" @focus.native="focusPhone = true"></masked-input>
+            <div class="error" v-if="focusPhone && !$v.form.phone.required">Нужен телефон</div>
+            <div class="error" v-if="focusPhone && !$v.form.phone.correctPhone">Должен быть действующий телефон</div>
         </div>
 
         <div class="form-group">
@@ -59,7 +61,10 @@ export default {
                 required
             },
             phone: {
-                required
+                required,
+                correctPhone: (phone) => {
+                    return phone.replace(/[^\d\.]/g, '').length == 11
+                },
             }
         }
     },
@@ -82,6 +87,7 @@ export default {
         async submitContactForm(){
             this.form.submitted = true;
             this.$v.form.$touch()
+            this.focusPhone = true
  
             let formReg = new FormData(); 
             formReg.append("name", this.form.name);
